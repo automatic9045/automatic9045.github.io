@@ -1,0 +1,35 @@
+﻿#menu {
+}
+
+    #menu div {
+        display: flex;
+        margin: 0 auto;
+        width: 1280px;
+    }
+
+        #menu div ul {
+            margin: auto 0 auto auto;
+        }
+
+            #menu div ul li {
+                width: auto;
+            }
+
+                #menu div ul li:before {
+                    left: 0;
+                }
+
+                #menu div ul li a {
+                    padding: 20px;
+                }
+
+#header-img-small {
+    display: block;
+    margin: auto auto auto 0;
+    width: 350px;
+    height: 40px;
+}
+
+    #header-img-small img {
+        display: block;
+    }
