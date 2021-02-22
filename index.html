@@ -7,7 +7,7 @@
     <title>岡オカ営業所</title>
     <link rel="stylesheet" type="text/css" href="css/basic.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <script type="text/javascript" src="js/wait.js"></script>
+    <script type="text/javascript" src="js/basic.js"></script>
 </head>
 <body onload="fade()">
     <div id="loading">
@@ -21,6 +21,12 @@
 
         <iframe class="menu smartphone" id="menu-smartphone" src="menu-with-header.html" frameborder="0" onload="menuOnload()"></iframe>
         <img class="header smartphone" id="header-smartphone" src="img/header-smartphone.svg" />
+
+        <div>
+            <script>
+                include("menu.html");
+            </script>
+        </div>
 
         <div id="content">
             <h1>岡オカ営業所へようこそ！</h1>
@@ -97,6 +103,5 @@
     </div>
 
     <script type="text/javascript" src="js/fade.js"></script>
-    <script type="text/javascript" src="js/menufix.js"></script>
 </body>
 </html>
