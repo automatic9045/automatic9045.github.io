@@ -9,6 +9,10 @@
     font-family: sans-serif;
 }
 
+small {
+    font-size: smaller;
+}
+
 .pc {
 }
 
