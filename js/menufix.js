@@ -4,7 +4,7 @@
     }
 
     const menuIFrames = document.getElementsByClassName("menu");
-    const menuIFrame = menuIFrames.length > 1 ? document.getElementsByClassName("menu smartphone") : menuIFrames[0];
+    const menuIFrame = menuIFrames.length > 1 ? document.getElementsByClassName("menu smartphone")[0] : menuIFrames[0];
 
     let timer = 0;
     menuIFrame.contentWindow.onresize = (() => {
