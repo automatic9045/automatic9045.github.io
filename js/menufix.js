@@ -1,6 +1,6 @@
 ﻿function menuOnload() {
     function changeParentHeight() {
-        menuIFrame.style.height = elm.contentWindow.document.body.scrollHeight + "px";
+        menuIFrame.style.height = menuIFrame.contentWindow.document.body.scrollHeight + "px";
     }
 
     const menuIFrames = document.getElementsByClassName("menu");
