@@ -8,8 +8,8 @@ function include(path) {
 	xhr.open("GET", path, true);
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState === 4 && xhr.status === 200) {
-			var responseText = xhr.responseText;//String型で取得
-			document.writeIn(responseText);//完了
+			var responseText = xhr.responseText;
+			document.write(responseText);
 		}
 	};
 	xhr.send();
