@@ -3,13 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <title>その他ソフトウェア - 岡オカ営業所</title>
-    <link rel="stylesheet" type="text/css" href="../css/basic.css" />
+    <base href="https://automatic9045.github.io" />
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
 </head>
 <body>
-    <iframe class="menu" src="../menu-with-header.html" frameborder="0"></iframe>
-    <script type="text/javascript" src="../js/menufix.js"></script>
+    <div class="menu menu-with-header"><script>includeByClasses("menu-with-header.html", "menu", 0);</script></div>
     <div id="content">
-        <a href="../index.html">HOME</a> > その他ソフトウェア
+        <a href="index.html">HOME</a> > その他ソフトウェア
         <h1>その他ソフトウェア</h1>
         <p>
             BVE関連以外の鉄道・バスに関するソフトウェアを公開しています。
@@ -19,11 +23,11 @@
         <table>
             <tbody>
                 <tr>
-                    <th><a href="#TRS.MS-12">TRS.MS-12 係員操作型端末</a></th>
+                    <th><a href="software/software.html#TRS.MS-12">TRS.MS-12 係員操作型端末</a></th>
                     <td>マルス端末MR-32風の汎用POS端末ソフトウェア（開発中・開発協力者募集中）</td>
                 </tr>
                 <tr>
-                    <th><a href="#NotReady">NotReady</a></th>
+                    <th><a href="software/software.html#NotReady">NotReady</a></th>
                     <td>券売機風の「準備中」画面を表示するソフトウェア</td>
                 </tr>
             </tbody>
@@ -32,16 +36,16 @@
         <table>
             <tbody>
                 <tr>
-                    <th><a href="#DBS2">発車標２</a></th>
+                    <th><a href="software/software.html#DBS2">発車標２</a></th>
                     <td>発車標を再現するソフトウェア（開発中）</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2><a name="TRS.MS-12">TRS.MS-12 係員操作型端末（開発中・開発協力者募集中）</a></h2>
+        <h2 id="TRS.MS-12">TRS.MS-12 係員操作型端末（開発中・開発協力者募集中）</h2>
         <a href="https://github.com/Automatic9045/TRS.MS-12">
-            <img src="TRS.MS-12/mainmenu.png" width="512" />
-            <img src="TRS.MS-12/numberedticket.png" width="512" />
+            <img src="software/TRS.MS-12/mainmenu.png" width="512" />
+            <img src="software/TRS.MS-12/numberedticket.png" width="512" />
         </a>
         <p>
             マルス端末MS-32をイメージした汎用POS端末ソフトウェアです。<br />
@@ -64,9 +68,9 @@
             <a href="https://github.com/Automatic9045/TRS.MS-12">こちら（ソースコード）</a>
         </p>
 
-        <h2><a name="NotReady">NotReady</a></h2>
+        <h2 id="NotReady">NotReady</h2>
         <a href="https://github.com/Automatic9045/NotReady">
-            <img src="NotReady/image.png" width="960" />
+            <img src="software/NotReady/image.png" width="960" />
         </a>
         <p>
             JR東日本の券売機をイメージした「準備中」画面を表示するソフトウェアです。<br />
@@ -76,8 +80,8 @@
             <a href="https://github.com/Automatic9045/NotReady">こちら</a>
         </p>
 
-        <h2><a name="DBS2">発車標２（開発中・未公開）</a></h2>
-        <img src="DBS2/image-main.png" />
+        <h2 id="DBS2">発車標２（開発中・未公開）</h2>
+        <img src="software/DBS2/image-main.png" />
         <p>
             発車標を再現するソフトウェアです。
         </p>
@@ -92,8 +96,8 @@
         <p>
             既に完成していますが、公開は然るべき時が来るまでお待ち下さい。
         </p>
-
-        <iframe id="footer" src="../footer.html" frameborder="0"></iframe>
+        
+        <div class="footer"><script>includeByClasses("footer.html", "footer", 0);</script></div>
     </div>
 </body>
 </html>

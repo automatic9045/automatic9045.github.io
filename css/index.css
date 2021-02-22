@@ -53,12 +53,12 @@ img.header {
         display: block;
     }
 
-@media screen and (max-width: 480px) {
-    iframe.menu.pc {
+@media screen and (max-width: 479px) {
+    div.menu.pc {
         display: none;
     }
 
-    iframe.menu.smartphone {
+    div.menu.smartphone {
         display: block;
     }
 

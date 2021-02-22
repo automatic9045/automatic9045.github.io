@@ -20,13 +20,16 @@ div.menu {
     position: sticky;
     top: 0;
     width: 100%;
-    height: 66px;
 }
 
 #content {
     margin: 0 auto;
     padding: 8px;
     width: 1280px;
+}
+
+p {
+    text-align: justify;
 }
 
 h1 {
@@ -69,29 +72,29 @@ table {
 
     table th, td {
         padding: 0 20px 4px 0;
-        text-align: left;
+        text-align: justify;
+        white-space: nowrap;
     }
 
     table td:last-child {
         padding-right: 0;
     }
 
-#footer {
-    width: 100%;
-    height: 70px;
+.float-clearer {
+    clear: both;
 }
 
-@media screen and (max-width: 480px) {
+div.footer {
+    width: 100%;
+}
+
+@media screen and (max-width: 1279px) {
     #content {
         width: 100%;
     }
 
     table th, td {
         padding-bottom: 8px;
-    }
-
-    table th {
-        white-space: nowrap;
     }
 
     img {

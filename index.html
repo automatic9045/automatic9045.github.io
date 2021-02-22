@@ -5,10 +5,14 @@
     <meta name="google-site-verification" content="b2qnYt8Kuzd7cS0bHC59x09t7FnPQbd_uJ_i33BbP2o" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <title>岡オカ営業所</title>
+    <base href="https://automatic9045.github.io" />
     <link rel="stylesheet" type="text/css" href="css/basic.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
     <script type="text/javascript" src="js/basic.js"></script>
     <script type="text/javascript" src="js/fade.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
 </head>
 <body onload="fade()">
     <div id="loading">
@@ -19,7 +23,7 @@
         <img class="header pc" src="img/header.svg" />
         <div class="menu pc"><script>includeByClasses("menu.html", "menu pc", 0);</script></div>
 
-        <div class="menu smartphone"><script>includeByClasses("menu-with-header.html", "menu smartphone", 0);</script></div>
+        <div class="menu menu-with-header smartphone"><script>includeByClasses("menu-with-header.html", "menu smartphone", 0);</script></div>
         <img class="header smartphone" src="img/header-smartphone.svg" />
 
         <div id="content">
@@ -66,8 +70,9 @@
                         <td>システム開発</td>
                     </tr>
                     <tr>
-                        <th>所有するPCの台数</th>
-                        <td>11台（Win10×7、Win8.1×2、Win7×1、WinXP×1）</td>
+                        <th>所有PCの台数</th>
+                        <td>11台（Win10×7、Win8.1×2、Win7×1、WinXP×1）<br />
+                        Win98捨てなきゃよかった……と後悔中</td>
                     </tr>
                     <tr>
                         <th>使える言語</th>
@@ -92,7 +97,7 @@
                 </tbody>
             </table>
 
-            <iframe id="footer" src="footer.html" frameborder="0"></iframe>
+            <div class="footer"><script>includeByClasses("footer.html", "footer", 0);</script></div>
         </div>
     </div>
 </body>

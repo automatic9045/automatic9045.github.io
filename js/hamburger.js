@@ -1,6 +1,6 @@
 ﻿function changeMenuVisibility() {
-    const menuButton = document.getElementById("menu-button");
-    const menuContent = document.getElementById("menu-content");
+    const menuButton = document.getElementsByClassName("menu-button")[0];
+    const menuContent = menuButton.parentElement.getElementsByClassName("menu-content")[0];
 
     if (menuButton.classList.contains("visible")) {
         menuButton.classList.remove("visible");

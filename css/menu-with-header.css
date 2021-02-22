@@ -1,104 +1,133 @@
-﻿#menu {
+﻿.menu {
 }
 
-    #menu div {
-        display: flex;
+    .menu.menu-with-header > div {
         margin: 0 auto;
         width: 1280px;
     }
 
-#menu-button {
-    display: none;
-}
+        .menu.menu-with-header > div > .header-img-small {
+            display: block;
+            float: left;
+            margin: 12px auto 12px 12px;
+            width: 350px;
+            height: 40px;
+        }
 
-#header-img-small {
-    display: block;
-    margin: 12px auto 12px 12px;
-    width: 350px;
-    height: 40px;
-}
+            .menu.menu-with-header > div > .header-img-small > img {
+                display: block;
+            }
 
-    #header-img-small img {
-        display: block;
+        .menu.menu-with-header > div > .menu-button {
+            display: none;
+        }
+
+@media screen and (min-width: 480px) {
+    .menu.menu-with-header > div > .menu-content {
+        float: right;
     }
 
-@media screen and (min-width: 481px) {
-    #menu-content {
-        margin: auto 0 auto auto;
-    }
-
-        #menu-content li {
+        .menu.menu-with-header > div > .menu-content li {
             width: auto;
         }
 
-            #menu-content li:before {
+            .menu.menu-with-header > div > .menu-content li:before {
                 left: 0;
             }
 
-            #menu-content li a {
+            .menu.menu-with-header > div > .menu-content li a {
                 padding: 20px;
             }
 }
 
-@media screen and (max-width: 480px) {
-    #menu div {
-        position: relative;
+@media screen and (max-width: 1279px) {
+    .menu.menu-with-header > div {
         width: 100%;
     }
+}
 
-    #menu-button {
-        display: block;
-        position: relative;
-        margin: 12px 12px 12px auto;
-        width: 40px;
-        height: 40px;
-        border-radius: 3px;
-        border: 1px solid #aaa;
-        background-color: transparent;
-        text-decoration: none;
-        transition: all linear 200ms;
+@media screen and (max-width: 479px) {
+    .menu.menu-with-header > div {
     }
 
-    #menu-button:hover, #menu-button:focus {
-        box-shadow: 0 0 1px 1px #0004;
-    }
-
-    #menu-button.visible {
-        background-color: #eee;
-    }
-
-        #menu-button span.hamburger-line, span.hamburger-line:before, span.hamburger-line:after {
-            display: inline-block;
-            position: absolute;
-            margin: auto;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 20px;
-            height: 2px;
-            content: "";
-            background-color: #444;
+        .menu.menu-with-header > div > .menu-button {
+            display: block;
+            float: right;
+            position: relative;
+            margin: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 3px;
+            border: 1px solid #aaa;
+            background-color: transparent;
+            text-decoration: none;
+            outline: none;
+            cursor: pointer;
+            transition: all linear 200ms;
         }
 
-            #menu-button span.hamburger-line:before {
-                top: -12px;
+            .menu.menu-with-header > div > .menu-button:hover, .menu-button:focus {
+                box-shadow: 0 0 1px 1px #0004;
             }
 
-            #menu-button span.hamburger-line:after {
-                top: 12px;
+            .menu.menu-with-header > div > .menu-button.visible {
+                background-color: #eee;
             }
 
-    #menu-content {
-        position: absolute;
-        top: 64px;
-        width: 100%;
-        height: 0;
-        overflow-y: hidden;
-        transition: height ease 500ms;
-    }
+            .menu.menu-with-header > div > .menu-button span.hamburger-line, span.hamburger-line:before, span.hamburger-line:after {
+                display: inline-block;
+                position: absolute;
+                margin: auto;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 20px;
+                height: 2px;
+                content: "";
+                background-color: #444;
+            }
 
-        #menu-content.visible {
-            height: auto;
+                .menu.menu-with-header > div > .menu-button span.hamburger-line:before {
+                    top: -12px;
+                }
+
+                .menu.menu-with-header > div > .menu-button span.hamburger-line:after {
+                    top: 12px;
+                }
+
+        .menu.menu-with-header > div > .menu-content {
+            display: block;
+            clear: both;
+            width: 100%;
+            height: 0;
+            overflow-y: hidden;
+            background-color: white;
+            transition: height ease 500ms;
         }
+
+            .menu.menu-with-header > div > .menu-content.visible {
+                height: 240px;
+            }
+
+            .menu.menu-with-header > div > .menu-content > li {
+                width: 100%;
+            }
+
+                .menu.menu-with-header > div > .menu-content > li > a {
+                    width: 100%;
+                    padding: 12px 0;
+                }
+
+                .menu.menu-with-header > div > .menu-content > li:before {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    top: 0;
+                    margin-top: 0;
+                    left: 50%;
+                    margin-left: -50%;
+                    content: "";
+                }
 }

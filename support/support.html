@@ -3,10 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <title>サポート - 岡オカ営業所</title>
-    <link rel="stylesheet" type="text/css" href="../css/basic.css" />
+    <base href="https://automatic9045.github.io" />
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
 </head>
 <body>
-    <div class="menu" src="../menu-with-header.html" frameborder="0" onload="menuOnload()"></div>
+    <div class="menu menu-with-header"><script>includeByClasses("menu-with-header.html", "menu", 0);</script></div>
     <div id="content">
         <a href="../index.html">HOME</a> > サポート
         <h1>サポート</h1>
@@ -36,7 +41,7 @@
         <h3>Q. このサイトにリンクしたいのですが。</h3>
         <p>
             ありがとうございます。<br />
-            このサイトにリンクする場合は、必ずトップページ（<a href="https://Automatic9045.github.io">https://Automatic9045.github.io</a>）へお願いします。
+            このサイトにリンクする場合は、必ずトップページ（<a href="https://automatic9045.github.io">https://automatic9045.github.io</a>）へお願いします。
         </p>
         <p>
             必須ではありませんが、もし良ければメールかTwitterのDMまで一報頂けると喜びます。
@@ -72,10 +77,8 @@
                 <b></b><br />
             </li>
         </ul>
-
-        <iframe id="footer" src="../footer.html" frameborder="0"></iframe>
+        
+        <div class="footer"><script>includeByClasses("footer.html", "footer", 0);</script></div>
     </div>
-
-    <script type="text/javascript" src="../js/menufix.js"></script>
 </body>
 </html>
