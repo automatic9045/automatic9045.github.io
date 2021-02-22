@@ -17,14 +17,10 @@
     </div>
     <div id="body">
         <img class="header pc" src="img/header.svg" />
-        <iframe class="menu pc" src="menu.html" frameborder="0"></iframe>
+        <div class="menu pc"><script>includeByClasses("menu.html", "menu pc");</script></div>
 
-        <iframe class="menu smartphone" id="menu-smartphone" src="menu-with-header.html" frameborder="0" onload="menuOnload()"></iframe>
-        <img class="header smartphone" id="header-smartphone" src="img/header-smartphone.svg" />
-
-        <div id="test">
-            <script>include("menu.html", "test");</script>
-        </div>
+        <div class="menu smartphone"><script>includeByClasses("menu-with-header.html", "menu smartphone");</script></div>
+        <img class="header smartphone" src="img/header-smartphone.svg" />
 
         <div id="content">
             <h1>岡オカ営業所へようこそ！</h1>

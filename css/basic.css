@@ -16,7 +16,7 @@
     display: none;
 }
 
-iframe.menu {
+div.menu {
     position: sticky;
     top: 0;
     width: 100%;
@@ -75,10 +75,6 @@ table {
     table td:last-child {
         padding-right: 0;
     }
-
-iframe {
-    display: block;
-}
 
 #footer {
     width: 100%;
