@@ -22,7 +22,7 @@
             display: none;
         }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
     .menu.menu-with-header > div > .menu-content {
         float: right;
     }
@@ -46,7 +46,7 @@
     }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 599px) {
     .menu.menu-with-header > div {
     }
 

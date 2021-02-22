@@ -70,10 +70,13 @@ table {
     margin: 10px 0;
 }
 
+    table th {
+        white-space: nowrap;
+    }
+
     table th, td {
         padding: 0 20px 4px 0;
         text-align: justify;
-        white-space: nowrap;
     }
 
     table td:last-child {
