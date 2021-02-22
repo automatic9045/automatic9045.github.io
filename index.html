@@ -18,13 +18,12 @@
     <div id="body">
         <img class="header pc" src="img/header.svg" />
         <iframe class="menu pc" src="menu.html" frameborder="0"></iframe>
-        <script type="text/javascript" src="js/menufix.js"></script>
 
         <iframe class="menu smartphone" id="menu-smartphone" src="menu-with-header.html" frameborder="0" onload="menuOnload()"></iframe>
         <img class="header smartphone" id="header-smartphone" src="img/header-smartphone.svg" />
 
-        <div>
-            <script>include("menu.html");</script>
+        <div id="test">
+            <script>include("menu.html", "test");</script>
         </div>
 
         <div id="content">
