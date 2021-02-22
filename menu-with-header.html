@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/iframe.css" />
     <link rel="stylesheet" type="text/css" href="css/menu.css" />
     <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <script type="text/javascript" src="js/hamburger.js"></script>
 </head>
 <body>
     <div id="menu">
@@ -15,7 +16,10 @@
             <a id="header-img-small" href="index.html" target="_top">
                 <img src="img/header-small.svg" />
             </a>
-            <ul>
+            <button type="button" id="menu-button" class="smartphone" onclick="changeMenuVisibility()">
+                <span class="hamburger-line"></span>
+            </button>
+            <ul id="menu-content">
                 <li>
                     <a href="index.html" target="_top">HOME</a>
                 </li>

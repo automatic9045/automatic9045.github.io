@@ -3,43 +3,43 @@
     border-bottom: 2px solid #eee;
 }
 
-    #menu ul {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        justify-content: center;
+#menu-content {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+    #menu-content li {
+        display: block;
+        position: relative;
+        width: 240px;
+        text-align: center;
+        transition: background-color linear 200ms;
     }
 
-        #menu ul li {
+        #menu-content li:before, li:last-child:after {
             display: block;
-            position: relative;
-            width: 240px;
-            text-align: center;
-            transition: background-color linear 200ms;
+            position: absolute;
+            width: 0;
+            height: 40px;
+            top: 50%;
+            margin-top: -20px;
+            content: "";
+            border-right: 1px solid #ccc;
         }
 
-            #menu ul li:before, li:last-child:after {
-                display: block;
-                position: absolute;
-                width: 0;
-                height: 40px;
-                top: 50%;
-                margin-top: -20px;
-                content: "";
-                border-right: 1px solid #ccc;
-            }
+        #menu-content li:after {
+            right: 0;
+        }
 
-            #menu ul li:after {
-                right: 0;
-            }
+        #menu-content li:hover {
+            background-color: #f8f8f8;
+        }
 
-            #menu ul li:hover {
-                background-color: #f8f8f8;
-            }
-
-            #menu ul li a {
-                display: block;
-                padding: 20px 0;
-                text-decoration: none;
-                color: black;
-            }
+        #menu-content li a {
+            display: block;
+            padding: 20px 0;
+            text-decoration: none;
+            color: black;
+        }

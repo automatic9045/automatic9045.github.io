@@ -8,16 +8,20 @@
     <link rel="stylesheet" type="text/css" href="css/basic.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" src="js/wait.js"></script>
-    <script type="text/javascript" src="js/index-html.js"></script>
 </head>
-<body onload="fade()">
+<body>
     <div id="loading">
         <div id="loading-mes-loading">Loading...</div>
         <div id="loading-mes-welcome">Welcome!</div>
     </div>
     <div id="body">
-        <img id="header" src="img/header.svg" />
-        <iframe id="menu" src="menu.html" frameborder="0"></iframe>
+        <img class="header pc" src="img/header.svg" />
+        <iframe class="menu pc" src="menu.html" frameborder="0"></iframe>
+        <script type="text/javascript" src="js/menufix.js"></script>
+
+        <iframe class="menu smartphone" id="menu-smartphone" src="menu-with-header.html" frameborder="0"></iframe>
+        <img class="header smartphone" id="header-smartphone" src="img/header-smartphone.svg" />
+
         <div id="content">
             <h1>岡オカ営業所へようこそ！</h1>
             <p>
@@ -91,5 +95,8 @@
             <iframe id="footer" src="footer.html" frameborder="0"></iframe>
         </div>
     </div>
+
+    <script type="text/javascript" src="js/fade.js"></script>
+    <script type="text/javascript" src="js/menufix.js"></script>
 </body>
 </html>

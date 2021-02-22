@@ -45,7 +45,28 @@
         opacity: 1;
     }
 
-#header {
-    display: block;
+img.header {
     width: 100%;
+}
+
+    img.header.pc {
+        display: block;
+    }
+
+@media screen and (max-width: 480px) {
+    iframe.menu.pc {
+        display: none;
+    }
+
+    iframe.menu.smartphone {
+        display: block;
+    }
+
+    img.header.pc {
+        display: none;
+    }
+
+    img.header.smartphone {
+        display: block;
+    }
 }
