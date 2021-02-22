@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" src="js/wait.js"></script>
 </head>
-<body>
+<body onload="fade()">
     <div id="loading">
         <div id="loading-mes-loading">Loading...</div>
         <div id="loading-mes-welcome">Welcome!</div>
@@ -19,7 +19,7 @@
         <iframe class="menu pc" src="menu.html" frameborder="0"></iframe>
         <script type="text/javascript" src="js/menufix.js"></script>
 
-        <iframe class="menu smartphone" id="menu-smartphone" src="menu-with-header.html" frameborder="0"></iframe>
+        <iframe class="menu smartphone" id="menu-smartphone" src="menu-with-header.html" frameborder="0" onload="menuOnload()"></iframe>
         <img class="header smartphone" id="header-smartphone" src="img/header-smartphone.svg" />
 
         <div id="content">
