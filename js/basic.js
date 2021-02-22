@@ -21,10 +21,6 @@ function includeById(path, elementId) {
 }
 
 function includeByClasses(path, elementClasses, index) {
-	const element = document.getElementByClassName(elementClasses)[index];
+	const element = document.getElementsByClassName(elementClasses)[index];
 	include(path, element);
-}
-
-function includeByClasses(path, elementClasses) {
-	includeByClasses(path, elementClasses, 0);
 }
