@@ -53,20 +53,6 @@ img.header {
         display: block;
     }
 
-.counter {
-    width: 100px;
-}
-
-    .counter > div {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-
-        .counter > div * {
-            display: block;
-        }
-
 @media screen and (max-width: 639px) {
     div.menu.pc {
         display: none;
