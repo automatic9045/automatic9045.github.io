@@ -2,16 +2,45 @@
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function eval2(obj) {
+	if (obj == "") return;
+	return Function("\"use strict\"; return (() => {" + obj + "})()")();
+}
+
+function evalFromFile(path) {
+	const xhr = new XMLHttpRequest();
+
+	xhr.open("GET", path, true);
+	xhr.onreadystatechange = (() => {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			eval2(xhr.responseText);
+		}
+	});
+	xhr.send();
+}
+
+function evalFromHTMLCollection(htmlCollection) {
+	for (let i = 0; i < htmlCollection.length; i++) {
+		const child = htmlCollection.item(i);
+		if (child.nodeName == "SCRIPT") {
+			if (child.src != null && child.src != "") evalFromFile(child.src);
+			eval2(child.textContent);
+		} else {
+			evalFromHTMLCollection(child.children);
+		}
+	}
+}
+
 function include(path, element) {
 	const xhr = new XMLHttpRequest();
 
 	xhr.open("GET", path, true);
-	xhr.onreadystatechange = function () {
+	xhr.onreadystatechange = (() => {
 		if (xhr.readyState === 4 && xhr.status === 200) {
-			var responseText = xhr.responseText;
-			element.innerHTML = responseText;
+			element.innerHTML = xhr.responseText;
+			evalFromHTMLCollection(element.children);
 		}
-	};
+	});
 	xhr.send();
 }
 
