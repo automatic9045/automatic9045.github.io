@@ -53,6 +53,10 @@ img.header {
         display: block;
     }
 
+.counter img {
+    margin-bottom: -2px !important;
+}
+
 @media screen and (max-width: 639px) {
     div.menu.pc {
         display: none;
