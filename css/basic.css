@@ -97,6 +97,13 @@ table {
     clear: both;
 }
 
+.anchor:before {
+    display: block;
+    margin-top: -82px;
+    padding-top: 82px;
+    content: "";
+}
+
 div.footer {
     width: 100%;
 }
