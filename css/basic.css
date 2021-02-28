@@ -8,6 +8,7 @@
     font-size: 16px;
     line-height: 1.5em;
     font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
 }
 
 small {
@@ -122,7 +123,7 @@ div.footer {
     }
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 899px) {
     * {
         font-size: 15px;
     }

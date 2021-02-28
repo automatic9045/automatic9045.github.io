@@ -57,7 +57,7 @@ img.header {
     margin-bottom: -2px !important;
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 899px) {
     div.menu.pc {
         display: none;
     }
