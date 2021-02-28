@@ -10,7 +10,7 @@
             display: flex;
             float: left;
             margin-left: 12px;
-            width: 350px;
+            width: 280px;
             height: 64px;
         }
 
@@ -81,7 +81,9 @@
                     background-color: #eee;
                 }
 
-                .menu.menu-with-header > div > .menu-button span.hamburger-line, span.hamburger-line:before, span.hamburger-line:after {
+                .menu.menu-with-header > div > .menu-button span.hamburger-line,
+                .menu.menu-with-header > div > .menu-button span.hamburger-line:before,
+                .menu.menu-with-header > div > .menu-button span.hamburger-line:after {
                     display: inline-block;
                     position: absolute;
                     margin: auto;
@@ -142,7 +144,7 @@
                     }
 }
 
-@media screen and (max-width: 449px) {
+@media screen and (max-width: 359px) {
     .menu.menu-with-header > div > .header-img-small {
         width: calc(100% - 76px);
     }

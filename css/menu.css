@@ -18,7 +18,8 @@
             transition: background-color linear 200ms;
         }
 
-            .menu .menu-content li:before, li:last-child:after {
+            .menu .menu-content li:before,
+            .menu .menu-content li:last-child:after {
                 display: block;
                 position: absolute;
                 width: 1px;
