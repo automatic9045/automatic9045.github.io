@@ -53,3 +53,12 @@ function includeByClasses(path, elementClasses, index) {
 	const element = document.getElementsByClassName(elementClasses)[index];
 	include(path, element);
 }
+
+
+/*--Global site tag(gtag.js) - Google Analytics--*/
+
+evalFromFile("https://www.googletagmanager.com/gtag/js?id=UA-173968596-2");
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-173968596-2');
