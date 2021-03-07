@@ -13,7 +13,7 @@
         .menu .menu-content li {
             display: block;
             position: relative;
-            width: 240px;
+            width: calc(1200px / 6);
             text-align: center;
             transition: background-color linear 200ms;
         }
