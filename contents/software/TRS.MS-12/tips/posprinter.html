@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="theme-color" content="#00A" />
+    <title>おまけ：レシートプリンターで券を印刷する - 岡オカ営業所</title>
+    <base href="https://automatic9045.github.io" />
+    <link rel="icon" type="image/svg+xml" href="img/bus.svg">
+    <link rel="apple-touch-icon" type="image/png" href="img/bus.png">
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+</head>
+<body>
+    <div class="menu menu-with-header"><script>includeByClasses("menu-small.html", "menu", 0);</script></div>
+    <div id="content">
+        <a href="./">HOME</a> > <a href="contents/software/">その他ソフトウェア</a> > <a href="contents/software/TRS.MS-12/">TRS.MS-12 係員操作型端末</a> > おまけ：レシートプリンターで券を印刷する
+        <h1>おまけ：レシートプリンターで券を印刷する</h1>
+        <p>
+            デフォルトではプリンターエミュレーターを使用する設定になっていますが、<br />
+            レシートプリンターをパソコンに接続し、設定を変更すると、券をプリンターから印刷することが出来ます。
+        </p>
+
+        <h2>購入</h2>
+        <p>
+            オススメはEPSON製のTM-L90です。理由は以下の通り。
+            <ul>
+                <li>58mm幅に対応している（※スペーサーか、それに準じるものが必要）</li>
+                <li>145μm厚の厚紙に対応している</li>
+            </ul>
+        </p>
+        <p>
+            新品で買うと非常に高い（10万円）ですが、ヤフオクで買えば非常に安く（3000～5000円）済みます。<br />
+            やはり業務用機器なだけあり非常に堅牢で、中古でも全然壊れません。
+        </p>
+        <p>
+            ただし、購入の際に注意しておきたいことがいくつかあります。Qiitaに記事としてまとめてあります。
+        </p>
+        <p>
+            <a href="https://qiita.com/Automatic9045/items/adca1d0995022bae2fa1">開発用にサーマルプリンターなどのPOS機器を購入する時のポイント - Qiita</a>
+        </p>
+        <p>
+            <a href="https://auctions.yahoo.co.jp/search/search?va=epson+tm-l90">ヤフオクで検索</a>
+        </p>
+        <p>
+            EPSON TM-L90の他、スター精密製のTSP100にもデフォルトで対応しています。<br />
+            これ以外のプリンターについても、プリンタープラグインを開発することで利用可能です。
+        </p>
+
+        <h2>セットアップ</h2>
+        <p>
+            購入後、プリンターをセットアップする方法についてはこちらから。
+        </p>
+        <p>
+            <a href="https://qiita.com/Automatic9045/items/820f2a4dccb1b2887065">EPSON製のサーマルプリンターなどのPOS機器をセットアップする - Qiita</a>
+        </p>
+
+        <h2>ソフトウェアの設定</h2>
+        <p>
+            最後に、Settings\App.xmlで使用するプリンターの設定を変更します。<br />
+            &lt;Printer&gt;タグを以下のように書き替えれば、準備は完了です。
+        </p>
+        <code>
+            &lt;Printer Class="Epson.TML90.Printer58" Name="（SetupPOSで設定したプリンター名。PosPrinterなど）" /&gt;
+        </code>
+
+        <div class="footer">
+            <script>includeByClasses("footer.html", "footer", 0);</script>
+        </div>
+    </div>
+</body>
+</html>
