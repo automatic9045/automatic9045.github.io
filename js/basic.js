@@ -37,7 +37,10 @@ function include(path, element) {
 	xhr.open("GET", path, true);
 	xhr.onreadystatechange = (() => {
 		if (xhr.readyState === 4 && xhr.status === 200) {
-			element.innerHTML = xhr.responseText;
+			const response = xhr.responseText;
+			response = response.replace("<meta name=\"robots\" content=\"noindex,nofollow\" />", "");
+			element.innerHTML = response;
+			
 			evalFromHTMLCollection(element.children);
 		}
 	});
