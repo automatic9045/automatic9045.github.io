@@ -38,8 +38,7 @@ function include(path, element) {
 	xhr.onreadystatechange = (() => {
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			const response = xhr.responseText;
-			response = response.replace("<meta name=\"robots\" content=\"noindex,nofollow\" />", "");
-			element.innerHTML = response;
+			element.innerHTML = response.replace("<meta name=\"robots\" content=\"noindex,nofollow\" />", "");
 			
 			evalFromHTMLCollection(element.children);
 		}
