@@ -94,6 +94,15 @@ table {
         padding-right: 0;
     }
 
+img.no-horizonal-margin {
+    margin: 0 -16px 0 -16px;
+}
+
+.bold-center {
+    text-align: center;
+    font-weight: bold;
+}
+
 .float-clearer {
     clear: both;
 }
@@ -121,9 +130,13 @@ div.footer {
     img {
         max-width: 100%;
     }
+
+        img.no-horizonal-margin {
+            margin: 0;
+        }
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 959px) {
     * {
         font-size: 15px;
     }
