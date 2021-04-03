@@ -1,14 +1,15 @@
 ﻿body {
     margin: 0;
     overflow-y: scroll;
-}
 
-* {
-    box-sizing: border-box;
     font-size: 16px;
     line-height: 1.5em;
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 small {
@@ -137,7 +138,7 @@ div.footer {
 }
 
 @media screen and (max-width: 959px) {
-    * {
+    body {
         font-size: 15px;
     }
 }
