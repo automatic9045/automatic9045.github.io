@@ -15,9 +15,16 @@
     <script type="text/javascript" src="js/hamburger.js"></script>
 </head>
 <body>
-    <script type="text/javascript" src="//counter1.fc2.com/counter.php?id=37357410&main=1"></script>
-    <script type="text/javascript" src="//counter1.fc2.com/views.php?id=37357410&main=1"></script>
-    <div class="menu menu-with-header"><script>includeByClasses("menu-small.html", "menu", 0);</script></div>
+    <div class="hidden-counter">
+        <!-- FC2カウンター ここから -->
+        <script type="text/javascript" src="//counter1.fc2.com/counter.php?id=37357410&main=1"></script>
+        <noscript><img src="//counter1.fc2.com/counter_img.php?id=37357410&main=1" /></noscript>
+        <script type="text/javascript" src="//counter1.fc2.com/views.php?id=37357410&main=1"></script>
+        <noscript><img src="//counter1.fc2.com/counter_now.php?id=37357410&main=1" /></noscript>
+        <!-- FC2カウンター ここまで -->
+    </div>
+    <div class="menu menu-with-header">
+    <script>includeByClasses("menu-small.html", "menu", 0);</script></div>
     <div id="content">
         <a href="./">HOME</a> > <a href="contents/software">その他ソフトウェア</a> > TRS.MS-12 係員操作型端末
         <h1>TRS.MS-12 係員操作型端末（開発中・開発協力者募集中）</h1>
@@ -36,8 +43,10 @@
         </p>
         <h4>プラグインの例</h4>
         <ul>
-            <li>自前のサーバーに接続してイベントの座席を予約し、整理券として発券する<br />
-            または発券した整理券をキャンセルする</li>
+            <li>
+                自前のサーバーに接続してイベントの座席を予約し、整理券として発券する<br />
+                または発券した整理券をキャンセルする
+            </li>
             <li>ユーザーのキー入力を監視し、所定のキーを押されたときにはキー入力を読み替える</li>
         </ul>
         <h4>対応言語の例</h4>

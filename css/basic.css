@@ -115,6 +115,10 @@ img.no-horizonal-margin {
     content: "";
 }
 
+.hidden-counter {
+    display: none;
+}
+
 div.footer {
     width: 100%;
 }
