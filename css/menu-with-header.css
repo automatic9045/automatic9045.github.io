@@ -117,8 +117,9 @@
             }
 
                 .menu.menu-with-header > div > .menu-content.visible {
-                    height: 242px;
-                    margin-bottom: -240px;
+                    --contents-count: 5;
+                    height: calc(48px * var(--contents-count) + 2px);
+                    margin-bottom: calc(-48px * var(--contents-count));
                 }
 
                 .menu.menu-with-header > div > .menu-content > li {
