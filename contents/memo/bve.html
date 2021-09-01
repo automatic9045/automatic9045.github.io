@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="theme-color" content="#00A" />
+    <title>作りたいものメモ - 岡オカ営業所</title>
+    <base href="https://automatic9045.github.io" />
+    <link rel="icon" type="image/svg+xml" href="img/bus.svg">
+    <link rel="apple-touch-icon" type="image/png" href="img/bus.png">
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <link rel="stylesheet" href="https://unpkg.com/mermaid/dist/mermaid.min.css">
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/copyright.js"></script>
+</head>
+<body>
+    <div class="menu menu-with-header"><script>includeByClasses("menu-small.html", "menu", 0);</script></div>
+    <div id="content">
+        <a href="/">HOME</a> > <a href="contents/memo/">メモ</a> > <a href="contents/memo/future.html">アイデア箱</a> > アイデア箱 BVE関連
+        <h1>アイデア箱 BVE関連</h1>
+        <p>
+            「こんなの欲しいな、作りたいな」と思いついたアイデアのメモ。<br />
+            アイデアのお持ち帰りはご自由にどうぞ。ただ、もし良ければ教えて下さい。泣いて喜びます。<br />
+            時間があるときに作る可能性があります。
+        </p>
+
+        <h2>マップを3Dで編集出来るソフトウェア</h2>
+        <p>
+            他軌道の座標をセンチ単位で微調整しながらリロードしまくる、あの苦行。
+            内輪向けに架空鉄道のシナリオを作ったことがあるのですが、あれ本当に大変ですよね。<br />
+            おまけに、分岐を作るときは3平方の定理や三角関数、他軌道の緩和曲線を作るときは積分と、幅広い数学の知識が必要なため
+            非常に作成へのハードルが高いです。特に積分なんて、それも数学Ⅲ範囲の積分ですからね。
+            高校で理系分野を専攻しないとそもそも数学Ⅲは習いませんから、大人でも知らない方のほうが多いかもしれません。<br />
+            3Dの画面で直感的にマップを作成出来たら、どんなに楽なことか。
+        </p>
+        <h3>メリット</h3>
+        <p>
+            3D化することによって得られるメリットは非常に大きなものです。
+        </p>
+        <h4>直感的に作れるようになる</h4>
+        <p>
+            数学の知識に富んでいない人でも気軽に作れるようになりますし、何よりかかる時間と脳を使う量が大幅に削減されます。
+        </p>
+        <h4>複数経由、往復のシナリオも一気に作れる</h4>
+        <p>
+            これが一番大きなメリットなんじゃないでしょうか。<br />
+            1つの駅の経由番線を変えるだけでも一苦労、逆方向を作るのはほぼ不可能……という常識をぶっ壊します！
+        </p>
+        <p>
+            本家BVE5・6と同様、C#+DirectXで1～2年後から開発予定です。<br />
+            クラスの設計もほぼ頭の中で完成しています。
+        </p>
+
+        <h2>マップにプラグインを組み込めるようにするプラグイン</h2>
+        <p>
+            現在、テクスチャに動きを持たせる機能は公式には提供されていません。<br />
+            そのため、シナリオ制作者は他列車や信号機などを用いる方法をあみ出し、なんとか工夫して実現しています。
+            ただし、これらの作業は非常に面倒で時間がかかるため、なかなか手を出しにくいのが現状です。
+        </p>
+        <p>
+            先日、DirectXに読み込まれたテクスチャをハックし、自在に書き換えるプログラムが公開されました。<br />
+            これを保安装置プラグインから呼び出せば、抑速信号や特発、動く発車標などが簡単に作れるようになります。<br />
+        </p>
+        <p>
+            しかし、ここでひとつ問題が発生します。<br />
+            <b><font color="red">マップ</font>の為の機能を、<font color="red">車両</font>の保安装置プラグインに組み込まなければならない</b>ということです。<br />
+            これは、マップの為のプラグインを、DetailManagerなどで車両毎にいちいち組み込まなければならないことを意味します。<br />
+            指定車両以外で運転したいときプラグインを車両フォルダにコピーする手間や、マップが更新されたときに全てのプラグインを差し替える手間を考えると、あまりに面倒でやっていられません。
+        </p>
+        <h3>「マッププラグイン」という新しい概念</h3>
+        <p>
+            マップの為の機能を、車両側の保安装置プラグインとして実装しない方法。<br />
+            その正解のひとつとして、<b>「マップ側でプラグインを指定できるようにする」保安装置プラグインを作る</b>という方法を提案します。
+        </p>
+        <p>
+            ここから、具体的な実装方法を説明していきます。<br />
+            なお、使用言語はBVE本体に合わせてC#などの.NET系言語を想定しています。
+        </p>
+        <h3>設計の例</h3>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js" charset="UTF-8"></script>
+        <div class="mermaid">
+            flowchart LR;
+                bve["BVE本体"] <--> dm(["Detail Managerなど"]);
+                    subgraph "保安装置プラグイン"
+                    dm <--> ats_1["ATSプラグイン"];
+                    dm <--> ats_2["モーター音プラグイン"];
+                    dm <--> ats_3["ワンマンプラグイン"];
+                    dm <--> ats_mpp(["Map Plugin Provider（仮称）"]);
+                    end
+                        subgraph "マッププラグイン（例）"
+                        ats_mpp <--> map_1["抑速現示プラグイン"];
+                        ats_mpp <--> map_2["発車標プラグイン"];
+                        end
+        </div>
+        <h3>Map Plugin Provider（仮称）について</h3>
+        <p>
+            保安装置プラグインとして「Map Plugin Provider」（仮称）を作成します。<br />
+            このプラグインは、Detail Managerなど（BVE本体側）とマッププラグインの橋渡し的な役割を果たします。<br />
+            モーター音プラグインなどの他の補助プラグインと同様、DetailManagerで他のプラグインと併用する前提です。
+        </p>
+        <p>
+            具体的な処理の流れとしては、
+            <ol>
+                <li>シナリオ読込時（Load関数）、BVEのプロセスを取得します。</li>
+                <li>リフレクションでマップファイルのパスを取得します。BVEの外部からマップファイルのパスがとれる構造になっていることは確認済です。<br />ここではマップファイルのパスを "HogeLine\Map_1234M.txt" とします。</li>
+                <li>マップファイルのパスを基に、マッププラグインリスト "HogeLine\Map_1234M.mplist.txt" を読み込みます。</li>
+                <li>
+                    マッププラグインリストの内容を基に、マッププラグインを動的に読み込みます。
+                    <ul>
+                        <li>特定のインターフェイス（仮に Automatic9045.BveMapPluginProvider.IMapPlugin とします）を実装したクラスをもって、マッププラグインとします。</li>
+                        <li>
+                            IMapPluginは、メンバーとして
+                            <ul>
+                                <li>void Load()関数</li>
+                                <li>void Dispose()関数</li>
+                                <li>void Initialize()関数</li>
+                                <li>void Elapse(ATS_VEHICLESTATE vehicleState, int[] sound)関数</li>
+                            </ul>
+                            を最低限もちます。ただし、必要に応じて引数を増やすことも要検討。
+                        </li>
+                    </ul>
+                </li>
+                <li>各マッププラグインのLoad関数を呼び出します。</li>
+                <li>各マッププラグインのInitialize関数を呼び出します。</li>
+                <li>フレーム毎に、各マッププラグインのElapse関数を呼び出します。</li>
+            </ol>
+            こんな感じです。
+        </p>
+
+        <div class="footer">
+            <script>includeByClasses("footer.html", "footer", 0);</script>
+        </div>
+    </div>
+</body>
+</html>
