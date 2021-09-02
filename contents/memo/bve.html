@@ -83,17 +83,30 @@
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js" charset="UTF-8"></script>
         <div class="mermaid">
             flowchart LR;
-                bve["BVE本体"] <--> dm(["Detail Managerなど"]);
-                    subgraph "保安装置プラグイン"
-                    dm <--> ats_1["ATSプラグイン"];
-                    dm <--> ats_2["モーター音プラグイン"];
-                    dm <--> ats_3["ワンマンプラグイン"];
-                    dm <--> ats_mpp(["Map Plugin Provider（仮称）"]);
+                bve["BVE本体"] <==> dm(["Detail Managerなど"]);
+                style dm fill:#fdd, stroke:#f88;
+                    subgraph "保安装置プラグイン（車両側）"
+                    subgraph "その他の保安装置プラグインの例"
+                    ats_1["ATS-Pプラグイン"];
+                    ats_2["モーター音プラグイン"];
+                    ats_3["ワンマンプラグイン"];
                     end
-                        subgraph "マッププラグイン（例）"
-                        ats_mpp <--> map_1["抑速現示プラグイン"];
-                        ats_mpp <--> map_2["発車標プラグイン"];
-                        end
+                    dm <--> ats_1;
+                    dm <--> ats_2;
+                    dm <--> ats_3;
+                    dm <==> ats_mpp(["Map Plugin Provider（仮称）"]);
+                    style ats_mpp fill:#fdd, stroke:#f88;
+                    end
+                        ats_mpp <==> mpl{{"マッププラグインリスト"}};
+                        style mpl fill:#fdb, stroke:#f80;
+                            subgraph "マッププラグイン（マップ側）"
+                            subgraph "マッププラグインの例"
+                            mp_1["抑速現示プラグイン"];
+                            mp_2["発車標プラグイン"];
+                            end
+                            mpl <--> mp_1;
+                            mpl <--> mp_2;
+                            end
         </div>
         <h3>Map Plugin Provider（仮称）について</h3>
         <p>
