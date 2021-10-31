@@ -39,6 +39,14 @@ p {
     text-align: justify;
 }
 
+a:active {
+    color: -webkit-link;
+}
+
+a.constr {
+    color: #ee0000;
+}
+
 h1 {
     margin: 40px 0 20px 0;
     font-size: 2.25em;
@@ -94,6 +102,21 @@ table {
     table td:last-child {
         padding-right: 0;
     }
+
+    table.with-border {
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+
+        table.with-border th,
+        table.with-border td {
+            padding: 4px 8px;
+            border: 1px solid #d0d7de;
+        }
+
+        table.with-border tr:nth-child(2n) td {
+            background-color: #f6f8fa;
+        }
 
 img.no-horizonal-margin {
     margin: 0 -16px 0 -16px;

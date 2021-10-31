@@ -1,0 +1,14 @@
+﻿table.with-border th.blue,
+table.with-border td.blue {
+    background-color: #c0ffff !important;
+}
+
+table.with-border th.yellow,
+table.with-border td.yellow {
+    background-color: #ffffc0 !important;
+}
+
+table.with-border th.red,
+table.with-border td.red {
+    background-color: #ffc0c0 !important;
+}
