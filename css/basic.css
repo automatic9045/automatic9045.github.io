@@ -45,6 +45,7 @@ a:active {
 
 a.constr {
     color: #ee0000;
+    text-decoration: none;
 }
 
 a.no-decoration {
