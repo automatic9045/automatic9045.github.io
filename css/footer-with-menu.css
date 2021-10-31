@@ -1,11 +1,12 @@
 ﻿div.footer div.footermenu {
     column-count: 4;
+    column-gap: 40px;
     margin: 50px 20px 20px 20px;
 }
 
     div.footer div.footermenu h1 {
-        margin: 20px 0 0 0;
-        font-size: 1.35em;
+        margin: 20px 0 -5px 0;
+        font-size: 1.5em;
     }
 
     div.footer div.footermenu h1:first-child {
@@ -13,7 +14,11 @@
     }
 
     div.footer div.footermenu h2 {
+        margin: 25px 0 0 0;
+        font-size: 1.3em;
+    }
+
+    div.footer div.footermenu h3 {
         margin: 20px 0 -10px 0;
-        font-size: 1.05em;
-        border-bottom: none;
+        font-size: 1.1em;
     }

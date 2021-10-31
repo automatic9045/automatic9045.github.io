@@ -47,6 +47,10 @@ a.constr {
     color: #ee0000;
 }
 
+a.no-decoration {
+    text-decoration: none;
+}
+
 h1 {
     margin: 40px 0 20px 0;
     font-size: 2.25em;
