@@ -25,3 +25,46 @@
             margin: 20px 0 -10px 0;
             font-size: 1.1em;
         }
+
+@media screen and (max-width: 959px) {
+    div.footer div.footermenu div.footermenu-content {
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    div.footer div.footermenu div.footermenu-content {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    div.footer div.footermenu {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    div.footer div.footermenu div.footermenu-content {
+        column-count: 1;
+    }
+
+        div.footer div.footermenu div.footermenu-content h1 {
+            margin: 20px 0 -5px 0;
+            font-size: 1.4em;
+        }
+
+            div.footer div.footermenu div.footermenu-content h1:first-child {
+                margin-top: 0;
+            }
+
+        div.footer div.footermenu div.footermenu-content h2 {
+            margin: 25px 0 0 0;
+            font-size: 1.2em;
+        }
+
+        div.footer div.footermenu div.footermenu-content h3 {
+            margin: 20px 0 -10px 0;
+            font-size: 1.1em;
+        }
+}
