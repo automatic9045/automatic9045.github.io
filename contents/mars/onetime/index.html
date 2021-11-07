@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="theme-color" content="#00A" />
+    <title>一件操作 - マルス端末研究 - 岡オカ営業所</title>
+    <base href="https://automatic9045.github.io" />
+    <link rel="icon" type="image/svg+xml" href="img/bus.svg">
+    <link rel="apple-touch-icon" type="image/png" href="img/bus.png">
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+</head>
+<body>
+    <div class="menu menu-with-header"><script>includeByClasses("menu-small.html", "menu", 0);</script></div>
+    <div id="content">
+        <a href="/">HOME</a> > <a href="contents/mars/">マルス端末研究</a> > 一件操作
+        <h1>一件操作</h1>
+        <p>
+            マルスには複数件の発売をまとめて1件として発売する「一件操作」と呼ばれる機能があります。<br />
+            一件操作中は<a href="contents/mars/sysline/onetime.html">システムラインに「一件操作中」と表示されます</a>。
+        </p>
+        <p>
+            ……と言ってもよく分からないと思います。ここで身近な例を出しましょう。
+        </p>
+
+        <h2>例</h2>
+        <h3>複数列車の指定席特急券をクレジットカードで購入する時</h3>
+        <p>
+            ここでは福島から伊東まで行くとして、福島→東京間は「はやぶさ」号、東京→伊東間は特急「踊り子」号の普通車指定席を利用するとしましょう。
+        </p>
+        <p>
+            このとき、端末での発売手順としては、おおまかに言うと
+            <ol>
+                <li>「<a href="contents/mars/ticket/reserved/reserved-nonreserved.html" class="constr">指定・自由席券</a>」<a href="contents/mars/ticket/">要求画面</a>から「はやぶさ」号の新幹線特急券を作る</li>
+                <li>同じく「<a href="contents/mars/ticket/reserved/reserved-nonreserved.html" class="constr">指定・自由席券</a>」<a href="contents/mars/ticket/">要求画面</a>から特急「踊り子」号の指定席特急券を作る</li>
+                <li>同じく「<a href="contents/mars/ticket/basicfare/basicfare.html" class="constr">乗車券</a>」<a href="contents/mars/ticket/">要求画面</a>から福島→伊東（経由：東北・東海道・伊東）の乗車券を作る</li>
+            </ol>
+            このようになりますが、ここで問題になるのがクレジットカードです。
+        </p>
+
+        <h4>カード読み込み・サイン地獄</h4>
+        <p>
+            クレジットカードを利用する場合、要求画面でFキー「<a href="contents/mars/fkey/f14.html">ｸﾚｼﾞｯﾄ</a>」を押してカードリーダーを起動し、カードを読み込ませた状態で発信することになります。そして、読み込んだカードの情報は発信後に破棄されます。<br />
+            そのため、通常のように発売発信（<a href="contents/mars/sendtype/">操作種別</a>を発売にして発信）すると<strong>1枚発券する度にクレジットカードを読み込ませ</strong>、そして<strong>印刷された駅控にサインをしてもらわなければいけません</strong>。<br />
+        </p>
+        <p>
+            具体的な手順を書くと、以下のようになります。
+            <ol>
+                <li>「<a href="contents/mars/ticket/reserved/reserved-nonreserved.html" class="constr">指定・自由席券</a>」<a href="contents/mars/ticket/">要求画面</a>に移動する</li>
+                <li>「はやぶさ」号の福島→東京間の新幹線特急券を要求するように入力する</li>
+                <li>Fキー「<a href="contents/mars/fkey/f14.html">ｸﾚｼﾞｯﾄ</a>」を押してクレジットカードを読み込ませる<strong>（1回目）</strong></li>
+                <li><a href="contents/mars/sendtype/">発売発信</a>する（→<mark>新幹線特急券、駅控、お客様控が印刷される</mark>）</li>
+                <li>駅控にサインをしてもらう<strong>（1回目）</strong></li>
+                <li><a href="contents/mars/fkey/release.html#hold-release">保持開放</a>する</li>
+                <li>特急「踊り子」号の東京→伊東間の指定席特急券を要求するように入力する</li>
+                <li>Fキー「<a href="contents/mars/fkey/f14.html">ｸﾚｼﾞｯﾄ</a>」を押してクレジットカードを読み込ませる<strong>（2回目）</strong></li>
+                <li><a href="contents/mars/sendtype/">発売発信</a>する（→<mark>指定席特急券、駅控、お客様控が印刷される</mark>）</li>
+                <li>駅控にサインをしてもらう<strong>（2回目）</strong></li>
+                <li><a href="contents/mars/fkey/release.html">開放</a>する</li>
+                <li>「<a href="contents/mars/ticket/basicfare/basicfare.html" class="constr">乗車券</a>」<a href="contents/mars/ticket/">要求画面</a>に移動する</li>
+                <li>福島→伊東（経由：東北・東海道・伊東）の乗車券を要求するように入力する</li>
+                <li>Fキー「<a href="contents/mars/fkey/f14.html">ｸﾚｼﾞｯﾄ</a>」を押してクレジットカードを読み込ませる<strong>（3回目）</strong></li>
+                <li><a href="contents/mars/sendtype/">発売発信</a>する（→<mark>乗車券、駅控、お客様控が印刷される</mark>）</li>
+                <li>駅控にサインをしてもらう<strong>（3回目）</strong></li>
+            </ol>
+            カードの読み込み、サインが3回も必要です。非常に面倒ですね。<br />
+            実際に2000年代初頭まではクレジットカードで支払おうとすると怒涛のサイン地獄に見舞われ、それはそれは係員・客共に大変だったそう。
+        </p>
+
+        <h4>一括一件の誕生</h4>
+        <p>
+            そこで、クレジットカード関連の操作が1度のみで済ませるための機能が生まれます。<br />
+            それが何種類かある一件操作の1つ、<mark>一括一件</mark>です。
+        </p>
+        <p>
+            一括一件を利用する場合の発売手順は以下のようになります。
+            <ol>
+                <li>「<a href="contents/mars/ticket/reserved/reserved-nonreserved.html" class="constr">指定・自由席券</a>」<a href="contents/mars/ticket/">要求画面</a>に移動する</li>
+                <li>「はやぶさ」号の福島→東京間の新幹線特急券を要求するように入力する</li>
+                <li><a href="contents/mars/sendtype/"><strong>予約</strong>発信</a>する（→<mark>自動的に一括一件が開始される</mark>。<mark>券は印刷されない</mark>）</li>
+                <li><a href="contents/mars/fkey/release.html#hold-release">保持開放</a>する</li>
+                <li>特急「踊り子」号の東京→伊東間の指定席特急券を要求するように入力する</li>
+                <li><a href="contents/mars/sendtype/"><strong>予約</strong>発信</a>する（→<mark>券は印刷されない</mark>）</li>
+                <li><a href="contents/mars/fkey/release.html">開放</a>する</li>
+                <li>「<a href="contents/mars/ticket/basicfare/basicfare.html" class="constr">乗車券</a>」<a href="contents/mars/ticket/">要求画面</a>に移動する</li>
+                <li>福島→伊東（経由：東北・東海道・伊東）の乗車券を要求するように入力する</li>
+                <li><a href="contents/mars/sendtype/"><strong>予約</strong>発信</a>する（→<mark>券は印刷されない</mark>）</li>
+                <li>Fキー「<a href="contents/mars/fkey/f11.html">一括発券</a>」を押して「<a href="contents/mars/ticket/common/packageonetime-print.html" class="constr">一括発券</a>」<a href="contents/mars/ticket/">要求画面</a>に移動する</li>
+                <li>Fキー「<a href="contents/mars/fkey/f14.html">ｸﾚｼﾞｯﾄ</a>」を押してクレジットカードを読み込ませる<strong>（1回目）</strong></li>
+                <li><a href="contents/mars/sendtype/"><strong>発売</strong>発信</a>する（→<mark>新幹線特急券、指定席特急券、乗車券、駅控、お客様控が1枚ずつ印刷される</mark>）</li>
+                <li>印刷された駅控にサインをしてもらう<strong>（1回目）</strong></li>
+            </ol>
+            <small>※現行の方法を掲載しています。以前ははじめに一括開始要求を送信する必要がありました。</small>
+        </p>
+
+        <p>
+            ここでは一括一件を紹介しましたが、他にも様々な種類の一件操作があります。<br />
+            例えば<mark>社割一件</mark>は社員割引のきっぷを複数件一括で発券するための一件操作です。<br />
+            また、支払関連以外の一件操作もあります。例えば<mark>連続一件</mark>は改札を通過可能な連続乗車券を発券するための一件操作です。
+        </p>
+        <p>
+            この先に様々な一件操作の一覧を掲載しています。<br />
+            更に詳細を知りたい場合は、一覧から各一件操作のページにアクセスすることも出来ます。
+        </p>
+
+        <h2>一件操作の一覧</h2>
+        <p>
+            スペースの都合で開始・発券の方法は代表的なもののみ掲載しています。<br />
+            詳細は各一件操作のページをご覧下さい。
+        </p>
+        <table class="with-border">
+            <thead>
+                <tr><th>名称</th><th>代表的な開始の方法</th><th>代表的な発券の方法</th><th>説明</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><a href="contents/mars/onetime/.html" class="constr">一括一件</a></td><td>一件操作外で予約発信</td><td>「一括発券」要求画面</td><td>クレジットカードの決済処理を一括で行う。なお現金払も可能</td></tr>
+                <tr><td><a href="contents/mars/onetime/.html" class="constr">普通一件</a></td><td colspan="2">不明（MR-32以降は廃止？）</td><td>機能は一括一件とほぼ同じ</td></tr>
+                <tr><td><a href="contents/mars/onetime/.html" class="constr">周遊一件</a></td><td rowspan="3">「一件操作開始」要求画面</td><td rowspan="5">「一件操作発券」要求画面</td><td>周遊きっぷ（ゾーン券とアプローチ券から構成される）を発券する</td></tr>
+                <tr><td><a href="contents/mars/onetime/.html" class="constr">企割一件</a></td><td>レール&レンタカー割引を一括で適用する</td></tr>
+                <tr><td><a href="contents/mars/onetime/.html" class="constr">連続一件</a></td><td>改札通過可能な連続乗車券を発券する</td></tr>
+                <tr><td><a href="contents/mars/onetime/.html" class="constr">社割一件</a></td><td rowspan="2">「社割／えきねっと一件開始」要求画面</td><td>社員割引を一括で適用する</td></tr>
+                <tr><td><a href="contents/mars/onetime/.html" class="constr">えきねっと<wbr />一件</a></td><td>同じクレジットカードの複数のえきねっと予約を一括で発券する</td></tr>
+                <tr><td><a href="contents/mars/onetime/.html" class="constr">電予一件</a></td><td>「電話発券開始」要求画面</td><td>「電話発券／発券照会」要求画面</td><td>プッシュホンで予約した指定席券を発券する</td></tr>
+            </tbody>
+        </table>
+
+        <h2>前身に当たる機能</h2>
+        <h3><a href="contents/mars/send-option/sum.html" class="no-decoration constr">連続加算</a></h3>
+        <p>
+            連続加算では、複数件の発売の総額を表示することのみ出来ます。<br />
+            現在もこの機能は残されており、Fキー「<a href="contents/mars/fkey/f15.html">連加算</a>」から利用は可能ですが、使う係員はほとんどいません。
+        </p>
+
+        <div class="footer">
+            <script>includeByClasses("footer-mars.html", "footer", 0);</script>
+        </div>
+    </div>
+</body>
+</html>
