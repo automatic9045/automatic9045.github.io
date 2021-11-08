@@ -136,6 +136,40 @@ img.no-horizonal-margin {
     clear: both;
 }
 
+.scrollable {
+    display: block;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    text-align: center;
+}
+
+    .scrollable::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollable .min-w-120 {
+        min-width: 120px;
+        white-space: initial;
+    }
+
+    .scrollable .min-w-160 {
+        min-width: 160px;
+        white-space: initial;
+    }
+
+    .scrollable .min-w-200 {
+        min-width: 200px;
+        white-space: initial;
+    }
+
+    .scrollable .min-w-240 {
+        min-width: 300px;
+        white-space: initial;
+    }
+
 .anchor:before {
     display: block;
     margin-top: -82px;
