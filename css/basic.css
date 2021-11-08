@@ -90,6 +90,10 @@ h6 {
     color: #777;
 }
 
+mark {
+    background: linear-gradient(transparent 50%, yellow 50%);
+}
+
 table {
     margin: 10px 0;
 }
