@@ -140,6 +140,15 @@ img.no-horizonal-margin {
     clear: both;
 }
 
+.new {
+    font-weight: bold;
+    color: red;
+}
+
+.secret {
+    color: darkgrey;
+}
+
 .scrollable {
     display: block;
     overflow-x: scroll;
