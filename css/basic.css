@@ -46,6 +46,7 @@ a:active {
 a.constr {
     color: #ee0000;
     text-decoration: none;
+    pointer-events: none;
 }
 
 a.no-decoration {
