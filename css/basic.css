@@ -132,6 +132,10 @@ img.no-horizonal-margin {
     margin: 0 -16px 0 -16px;
 }
 
+img.stretch {
+    width: 100%;
+}
+
 .bold-center {
     text-align: center;
     font-weight: bold;
