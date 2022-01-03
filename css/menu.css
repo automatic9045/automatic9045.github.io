@@ -1,4 +1,8 @@
-﻿.menu {
+﻿header {
+    display: block;
+}
+
+.menu {
     background-color: white;
     border-bottom: 1px solid #e8e8e8;
 }

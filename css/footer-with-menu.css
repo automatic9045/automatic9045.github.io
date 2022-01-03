@@ -1,70 +1,84 @@
-﻿div.footer div.footermenu {
-    margin: 30px 20px 20px 20px;
+﻿footer {
 }
 
-    div.footer div.footermenu div.footermenu-content {
-        column-count: 4;
-        column-gap: 40px;
+    footer div.footermenu {
+        margin: 0 16px;
+        padding: 30px calc((100% - 1280px) / 2 + 32px);
+        font-size: 0.8em;
+        color: #444;
     }
 
-        div.footer div.footermenu div.footermenu-content h1 {
-            margin: 20px 0 -5px 0;
-            font-size: 1.5em;
+        footer div.footermenu div.footermenu-content {
+            column-count: 5;
+            column-gap: 30px;
         }
 
-            div.footer div.footermenu div.footermenu-content h1:first-child {
-                margin-top: 0;
+            footer div.footermenu div.footermenu-content h1 {
+                margin: 25px 0 0 0;
+                padding: 10px 0;
+                border-bottom: 1px solid #aaa;
+                font-size: 1.5em;
+                font-weight: normal;
             }
 
-        div.footer div.footermenu div.footermenu-content h2 {
-            margin: 25px 0 0 0;
-            font-size: 1.3em;
-        }
+                footer div.footermenu div.footermenu-content h1:first-child {
+                    margin-top: 0;
+                }
 
-        div.footer div.footermenu div.footermenu-content h3 {
-            margin: 20px 0 -10px 0;
-            font-size: 1.1em;
-        }
+            footer div.footermenu div.footermenu-content h2 {
+                margin: 25px 0 0 0;
+                padding-left: 10px;
+                border-bottom: none;
+                border-left: 5px solid #aaa;
+                font-size: 1.2em;
+            }
+
+            footer div.footermenu div.footermenu-content h3 {
+                margin: 15px 0 -5px 0;
+                font-size: 1em;
+            }
+
+            footer div.footermenu div.footermenu-content ul {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            footer div.footermenu div.footermenu-content a {
+                text-decoration: underline;
+                color: #444;
+            }
+
+@media screen and (max-width: 1279px) {
+    div.breadcrumb {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
 
 @media screen and (max-width: 959px) {
-    div.footer div.footermenu div.footermenu-content {
-        column-count: 3;
+    footer div.footermenu div.footermenu-content {
+        column-count: 4;
     }
 }
 
 @media screen and (max-width: 799px) {
-    div.footer div.footermenu div.footermenu-content {
-        column-count: 2;
+    footer div.footermenu div.footermenu-content {
+        column-count: 3;
     }
 }
 
 @media screen and (max-width: 599px) {
-    div.footer div.footermenu {
-        font-size: 0.9em;
+    footer div.footermenu {
+        padding: 20px;
+    }
+
+    footer div.footermenu div.footermenu-content {
+        column-count: 2;
     }
 }
 
-@media screen and (max-width: 499px) {
-    div.footer div.footermenu div.footermenu-content {
+@media screen and (max-width: 399px) {
+    footer div.footermenu div.footermenu-content {
         column-count: 1;
     }
-
-        div.footer div.footermenu div.footermenu-content h1 {
-            margin: 20px 0 -5px 0;
-            font-size: 1.4em;
-        }
-
-            div.footer div.footermenu div.footermenu-content h1:first-child {
-                margin-top: 0;
-            }
-
-        div.footer div.footermenu div.footermenu-content h2 {
-            margin: 25px 0 0 0;
-            font-size: 1.2em;
-        }
-
-        div.footer div.footermenu div.footermenu-content h3 {
-            margin: 20px 0 -10px 0;
-            font-size: 1.1em;
-        }
 }

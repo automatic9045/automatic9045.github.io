@@ -32,6 +32,7 @@ div.menu {
 #content {
     margin: 0 auto;
     padding: 16px;
+    padding-bottom: 64px;
     width: 1280px;
 }
 
@@ -44,8 +45,8 @@ a:active {
 }
 
 a.constr {
-    color: #ee0000;
-    text-decoration: none;
+    color: #ee0000 !important;
+    text-decoration: none !important;
     pointer-events: none;
 }
 
@@ -197,10 +198,6 @@ img.stretch {
 
 .hidden-counter {
     display: none;
-}
-
-div.footer {
-    width: 100%;
 }
 
 @media screen and (max-width: 1279px) {
