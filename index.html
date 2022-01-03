@@ -25,12 +25,17 @@
         <div id="loading-mes-welcome">Welcome!</div>
     </div>
     <div id="body">
-        <img class="header pc" src="img/header.svg" />
-        <div class="menu pc"><script>includeByClasses("menu.html", "menu pc", 0);</script></div>
+        <header>
+            <img class="header pc" src="img/header.svg" />
+            <div class="menu pc">
+                <script>includeByClasses("menu.html", "menu pc", 0);</script>
+            </div>
 
-        <div class="menu menu-with-header smartphone"><script>includeByClasses("menu-small.html", "menu smartphone", 0);</script></div>
-        <img class="header smartphone" src="img/header-smartphone.svg" />
-
+            <div class="menu menu-with-header smartphone">
+                <script>includeByClasses("menu-small.html", "menu smartphone", 0);</script>
+            </div>
+            <img class="header smartphone" src="img/header-smartphone.svg" />
+        </header>
         <div id="content">
             <p class="counter">
                 Total Guests:
@@ -146,11 +151,10 @@
                     </tr>
                 </tbody>
             </table>
-
-            <div class="footer">
-                <script>includeByClasses("footer.html", "footer", 0);</script>
-            </div>
         </div>
+        <footer class="footer">
+            <script>includeByClasses("footer.html", "footer", 0);</script>
+        </footer>
     </div>
 </body>
 </html>
