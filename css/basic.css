@@ -23,7 +23,7 @@ small {
     display: none;
 }
 
-div.menu {
+.menu {
     position: sticky;
     top: 0;
     width: 100%;

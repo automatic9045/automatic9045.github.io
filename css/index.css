@@ -58,11 +58,11 @@ img.header {
 }
 
 @media screen and (max-width: 959px) {
-    div.menu.pc {
+    .menu.pc {
         display: none;
     }
 
-    div.menu.smartphone {
+    .menu.smartphone {
         display: block;
     }
 

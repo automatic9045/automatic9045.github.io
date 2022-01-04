@@ -25,17 +25,14 @@
         <div id="loading-mes-welcome">Welcome!</div>
     </div>
     <div id="body">
-        <header>
-            <img class="header pc" src="img/header.svg" />
-            <div class="menu pc">
-                <script>includeByClasses("menu.html", "menu pc", 0);</script>
-            </div>
-
-            <div class="menu menu-with-header smartphone">
-                <script>includeByClasses("menu-small.html", "menu smartphone", 0);</script>
-            </div>
-            <img class="header smartphone" src="img/header-smartphone.svg" />
+        <img class="header pc" src="img/header.svg" />
+        <header class="menu pc">
+            <script>includeByClasses("menu.html", "menu pc", 0);</script>
         </header>
+        <header class="menu menu-with-header smartphone">
+            <script>includeByClasses("menu-small.html", "menu smartphone", 0);</script>
+        </header>
+        <img class="header smartphone" src="img/header-smartphone.svg" />
         <div id="content">
             <p class="counter">
                 Total Guests:
