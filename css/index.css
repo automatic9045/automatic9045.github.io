@@ -53,9 +53,13 @@ img.header {
         display: block;
     }
 
-.counter img {
-    margin-bottom: -2px !important;
+.counter {
+    margin-bottom: 32px;
 }
+
+    .counter img {
+        margin-bottom: -2px !important;
+    }
 
 @media screen and (max-width: 959px) {
     .menu.pc {

@@ -13,7 +13,7 @@
             column-gap: 30px;
         }
 
-            footer div.footermenu div.footermenu-content h1 {
+            footer div.footermenu div.footermenu-content h2 {
                 margin: 25px 0 0 0;
                 padding: 10px 0;
                 border-bottom: 1px solid #aaa;
@@ -21,20 +21,19 @@
                 font-weight: normal;
             }
 
-                footer div.footermenu div.footermenu-content h1:first-child {
+                footer div.footermenu div.footermenu-content h2:first-child {
                     margin-top: 0;
                 }
 
-            footer div.footermenu div.footermenu-content h2 {
+            footer div.footermenu div.footermenu-content h3 {
                 margin: 25px 0 0 0;
-                padding-left: 10px;
-                border-bottom: none;
+                padding: 0 0 0 10px;
                 border-left: 5px solid #aaa;
                 font-size: 1.2em;
             }
 
-            footer div.footermenu div.footermenu-content h3 {
-                margin: 15px 0 -5px 0;
+            footer div.footermenu div.footermenu-content h4 {
+                margin: 15px 0 -8px 0;
                 font-size: 1em;
             }
 
