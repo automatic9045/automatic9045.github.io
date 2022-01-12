@@ -26,8 +26,9 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/menu.css" />
     <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <script type="text/javascript" src="js/copyright/js.cookie.js"></script>
     <script type="text/javascript" src="js/basic.js"></script>
-    <script type="text/javascript" src="js/fade.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/hamburger.js"></script>
 
 </head>
@@ -37,6 +38,7 @@
         <div id="loading-mes-welcome">Welcome!</div>
     </div>
     <div id="body">
+        <script>prepareToFade();</script>
         <img class="header pc" src="img/header.svg" />
         <header class="menu pc">
             <script>includeByClasses("menu.html", "menu pc", 0);</script>
