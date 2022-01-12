@@ -34,8 +34,11 @@
 </head>
 <body onload="fade()">
     <div id="loading">
-        <div id="loading-mes-loading">Loading...</div>
-        <div id="loading-mes-welcome">Welcome!</div>
+        <div class="loading-mes loading-mes-loading">Loading...</div>
+        <div class="loading-mes loading-mes-welcome">Welcome!</div>
+        <canvas id="loading-road"></canvas>
+        <!--<div id="loading-bus-debug"></div>-->
+        <script>beginLoadAnimation();</script>
     </div>
     <div id="body">
         <script>prepareToFade();</script>
