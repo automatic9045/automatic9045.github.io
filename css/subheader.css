@@ -1,0 +1,51 @@
+﻿.subheader.bg {
+    padding: 16px calc((100% - 1280px) / 2 + 16px);
+    padding-bottom: 64px;
+    background-size: cover;
+}
+
+    .subheader.bg > .subheader-content {
+        color: white;
+        filter: drop-shadow(0 0 8px black);
+    }
+
+        .subheader.bg > .subheader-content h1 {
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            font-size: 3em;
+            border-bottom: 2px solid white;
+        }
+
+        .subheader.bg > .subheader-content a {
+            color: white;
+            text-decoration: underline;
+        }
+
+    .subheader.bg.mars {
+        background-image: url("/contents/mars/header.jpg");
+        position: relative;
+        z-index: 0;
+    }
+
+    .subheader.bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: inherit;
+        z-index: -1;
+    }
+
+    .subheader.bg.mars::before {
+        filter: brightness(75%);
+    }
+
+@media screen and (max-width: 1279px) {
+    .subheader.bg {
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 100%;
+    }
+}
