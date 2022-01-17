@@ -1,7 +1,19 @@
 ﻿footer {
     display: block;
+    position: relative;
     background: #f2f2f2;
 }
+
+    footer::before {
+        --bus-height: 60px;
+        content: "";
+        position: absolute;
+        right: 10%;
+        top: calc(0px - var(--bus-height));
+        width: calc(var(--bus-height) * 3.25);
+        height: var(--bus-height);
+        background: url("/img/bus_side.svg") bottom / contain no-repeat transparent;
+    }
 
     footer hr {
         margin: 0;
@@ -14,3 +26,9 @@
         padding: 15px 0;
         text-align: center;
     }
+
+@media screen and (max-width: 959px) {
+    footer::before {
+        --bus-height: 40px;
+    }
+}
