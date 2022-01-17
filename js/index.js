@@ -111,5 +111,5 @@ async function fade() {
         await wait(1500);
     }
 
-    Cookies.set("do-fade", "1", { "expires": 2 });
+    Cookies.set("do-fade", "1", { "expires": 0.25 });
 }
