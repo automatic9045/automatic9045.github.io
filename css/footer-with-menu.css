@@ -21,6 +21,10 @@
                 font-weight: normal;
             }
 
+                footer div.footermenu div.footermenu-content h2::before {
+                    content: none;
+                }
+
                 footer div.footermenu div.footermenu-content h2:first-child {
                     margin-top: 0;
                 }
@@ -31,6 +35,14 @@
                 border-left: 5px solid #aaa;
                 font-size: 1.2em;
             }
+
+                footer div.footermenu div.footermenu-content h3::before {
+                    content: none;
+                }
+
+                footer div.footermenu div.footermenu-content h3::after {
+                    content: none;
+                }
 
             footer div.footermenu div.footermenu-content h4 {
                 margin: 15px 0 -8px 0;
@@ -71,9 +83,9 @@
         padding: 20px;
     }
 
-    footer div.footermenu div.footermenu-content {
-        column-count: 2;
-    }
+        footer div.footermenu div.footermenu-content {
+            column-count: 2;
+        }
 }
 
 @media screen and (max-width: 399px) {
