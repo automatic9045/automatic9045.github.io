@@ -15,6 +15,17 @@
         background: url("/img/bus_side.svg") bottom / contain no-repeat transparent;
     }
 
+    footer::after {
+        --bus-height: 60px;
+        content: "";
+        position: absolute;
+        right: calc(10% + var(--bus-height) * 4);
+        top: calc(var(--bus-height) * -0.6);
+        width: 10px;
+        height: calc(var(--bus-height) * 0.6);
+        background: url("/img/busstop.svg") bottom / contain no-repeat transparent;
+    }
+
     footer hr {
         margin: 0;
         border: none;
@@ -29,6 +40,10 @@
 
 @media screen and (max-width: 959px) {
     footer::before {
+        --bus-height: 40px;
+    }
+
+    footer::after {
         --bus-height: 40px;
     }
 }
