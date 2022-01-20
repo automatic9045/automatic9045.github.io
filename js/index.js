@@ -9,12 +9,16 @@ let lastTime = 0;
 
 let isWidthShort;
 let busSpeed = 2000; // px/s
-let lineSpeed = 0;
+let line1Speed = 0;
+let line2Speed = 0;
 let busX;
-let lineX = 0;
+let line1X = 0;
+let line2X = 0;
 
 let hasBrakeCompleted = false;
 let hasLoadCompleted = false;
+let hasLine1BegunMoving = false;
+let hasLine2BegunMoving = false;
 
 function beginLoadAnimation() {
     window.addEventListener("touchmove", hideOverflow);
@@ -27,7 +31,8 @@ function beginLoadAnimation() {
     canvasContext = canvas.getContext("2d");
 
     busX = canvas.width;
-    lineX = canvas.width + 100;
+    line1X = canvas.width + 100;
+    line2X = canvas.width + 200;
     isWidthShort = canvas.width < 960;
 
     bus = document.createElement("canvas");
@@ -53,8 +58,10 @@ function tick() {
     lastTime = now;
 
     if (hasLoadCompleted) {
-        busSpeed += 1000 / fps;
-        lineSpeed += 1000 / fps;
+        const acceleration = 1000 / fps;
+        busSpeed += acceleration;
+        if (hasLine1BegunMoving) line1Speed += acceleration;
+        if (hasLine2BegunMoving) line2Speed += acceleration;
     } else if (!hasBrakeCompleted) {
         busSpeed -= (isWidthShort ? 5 : 4) * (busSpeed - 100) / fps;
 
@@ -64,19 +71,26 @@ function tick() {
         }
     }
 
-    busX -= (isWidthShort ? busSpeed : busSpeed * 2) / fps;
-    lineX -= (isWidthShort ? lineSpeed : lineSpeed * 2) / fps;
+    if (isWidthShort) {
+        busX -= busSpeed / fps;
+        line1X -= line1Speed / fps;
+        line2X -= line2Speed / fps;
+    } else {
+        busX -= busSpeed * 2 / fps;
+        line1X -= line1Speed * 2 / fps;
+        line2X -= line2Speed * 2 / fps;
+    }
 
     canvasContext.clearRect(0, 0, canvas.width, canvas.height);
     canvasContext.drawImage(bus, Math.round(busX), 0);
     canvasContext.fillStyle = "#80c0a0";
-    canvasContext.fillRect(0, 100, Math.round(lineX), 4);
+    canvasContext.fillRect(0, 100, Math.round(line1X), 4);
     canvasContext.fillStyle = "#2e3192";
-    canvasContext.fillRect(0, 104, Math.round(lineX), 4);
+    canvasContext.fillRect(0, 104, Math.round(line2X), 4);
 
     //document.getElementById("loading-bus-debug").innerHTML = x + "px<br>" + speed + "px/s<br>" + fps + "fps";
 
-    if (busX < -500 && lineX < 0) {
+    if (busX < -500 && line2X < 0) {
         clearInterval(timer);
         return;
     }
@@ -108,6 +122,10 @@ async function fade() {
         hasLoadCompleted = true;
         window.removeEventListener("touchmove", hideOverflow);
         bodyDiv.classList.add("fade");
+        await wait(100);
+        hasLine1BegunMoving = true;
+        await wait(100);
+        hasLine2BegunMoving = true;
         await wait(1500);
     }
 
