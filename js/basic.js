@@ -103,7 +103,7 @@ function setHTMLByClasses(html, elementClasses, index) {
 }
 
 function getRandomBusNumber() {
-	const busNumbers = ["F9045", "F9045", "F9045", "F9045", "F9045", "0039"];
+	const busNumbers = ["F9045", "F9045", "F9045", "9304", "9304", "0039"];
 
 	const i = Math.floor(Math.random() * busNumbers.length);
 	return busNumbers[i];
