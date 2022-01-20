@@ -1,49 +1,49 @@
 ﻿footer {
-    display: block;
-    position: relative;
-    background: #f2f2f2;
 }
 
-    footer::before {
+    footer > .footer-bus {
         --bus-height: 60px;
         content: "";
-        position: absolute;
-        right: 10%;
-        top: calc(0px - var(--bus-height));
+        position: relative;
+        margin: 0 10% 0 auto;
         width: calc(var(--bus-height) * 3.25);
         height: var(--bus-height);
-        background: url("/img/bus_side.svg") bottom / contain no-repeat transparent;
+        background: bottom / contain no-repeat transparent;
     }
 
-    footer::after {
-        --bus-height: 60px;
-        content: "";
-        position: absolute;
-        right: calc(10% + var(--bus-height) * 4);
-        top: calc(var(--bus-height) * -0.6);
-        width: 10px;
-        height: calc(var(--bus-height) * 0.6);
-        background: url("/img/busstop.svg") bottom / contain no-repeat transparent;
-    }
+        footer > .footer-bus::after {
+            content: "";
+            position: absolute;
+            right: calc(10% + var(--bus-height) * 4);
+            bottom: 0;
+            width: 10px;
+            height: calc(var(--bus-height) * 0.6);
+            background: url("/img/busstop.svg") bottom / contain no-repeat transparent;
+        }
 
-    footer hr {
-        margin: 0;
-        border: none;
-        border-top: 1px solid #ddd;
-    }
-
-    footer small {
+    footer > .footer-main {
         display: block;
-        padding: 15px 0;
-        text-align: center;
+        background: #f2f2f2;
     }
+
+        footer > .footer-main hr {
+            margin: 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+
+        footer > .footer-main > small {
+            display: block;
+            padding: 15px 0;
+            text-align: center;
+        }
 
 @media screen and (max-width: 959px) {
-    footer::before {
+    footer > .footer-bus {
         --bus-height: 40px;
     }
 
-    footer::after {
-        --bus-height: 40px;
-    }
+        footer > .footer-bus::after {
+            --bus-height: 40px;
+        }
 }

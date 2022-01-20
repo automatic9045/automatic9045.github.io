@@ -10,7 +10,7 @@ function eval2(obj) {
 function evalFromFile(path) {
 	const xhr = new XMLHttpRequest();
 
-	xhr.open("GET", path, true);
+	xhr.open("GET", path, false);
 	xhr.onreadystatechange = (() => {
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			eval2(xhr.responseText);
@@ -34,7 +34,7 @@ function evalFromHTMLCollection(htmlCollection) {
 function include(path, element) {
 	const xhr = new XMLHttpRequest();
 
-	xhr.open("GET", path, true);
+	xhr.open("GET", path, false);
 	xhr.onreadystatechange = (() => {
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			const response = xhr.responseText;
@@ -51,9 +51,62 @@ function includeById(path, elementId) {
 	include(path, element);
 }
 
+function includeByClasses(path, elementClasses) {
+	const elements = document.getElementsByClassName(elementClasses);
+	if (elements.length == 1) {
+		include(path, elements[0]);
+	} else {
+		Array.from(elements).forEach(element => include(path, element));
+    }
+}
+
 function includeByClasses(path, elementClasses, index) {
 	const element = document.getElementsByClassName(elementClasses)[index];
 	include(path, element);
+}
+
+function setHTML(html, element) {
+	element.innerHTML = html;
+}
+
+function setHTMLById(html, elementId) {
+	const element = document.getElementById(elementId);
+	setHTML(html, element);
+}
+
+function setHTMLByClasses(html, elementClasses, index) {
+	const elements = document.getElementsByClassName(elementClasses);
+
+	switch (arguments.length) {
+		case 2:
+			switch (elements.length) {
+				case 0:
+					console.error("Cannot find the class '" + elementClasses + "'");
+					return;
+
+				case 1:
+					setHTML(html, elements[0]);
+					break;
+
+				default:
+					Array.from(elements).forEach(element => {
+						setHTML(html, element);
+					});
+					break;
+			}
+			break;
+
+		case 3:
+			setHTML(html, elements[index]);
+			break;
+    }
+}
+
+function getRandomBusNumber() {
+	const busNumbers = ["F9045", "F9045", "F9045", "F9045", "F9045", "0039"];
+
+	const i = Math.floor(Math.random() * busNumbers.length);
+	return busNumbers[i];
 }
 
 
