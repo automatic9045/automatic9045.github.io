@@ -1,5 +1,5 @@
 ﻿const busNumber = getRandomBusNumber();
-const elements = document.getElementsByClassName("footer-bus");
+const elements = document.getElementsByClassName("footer-bus-body");
 
 switch (elements.length) {
 	case 0:

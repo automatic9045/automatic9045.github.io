@@ -102,6 +102,43 @@ function setHTMLByClasses(html, elementClasses, index) {
     }
 }
 
+function refresh() {
+	const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+	const bottom = scrollTop + document.documentElement.clientHeight;
+
+	const clientHeight = document.documentElement.clientHeight; // ブラウザ内の表示域
+	const offsetHeight = document.documentElement.offsetHeight; // ドキュメントの高さ
+
+	checkFadeFooterBus(bottom);
+	adjustContentHeight(clientHeight, offsetHeight);
+}
+
+function checkFadeFooterBus(bottom) {
+	const footer = document.getElementsByTagName("footer")[0];
+	const top = footer.offsetTop;
+
+	if (top < bottom) {
+		const footerBus = footer.getElementsByClassName("footer-bus")[0];
+
+		const footerBusBody = footerBus.getElementsByClassName("footer-bus-body")[0];
+		const footerSNS = footerBus.getElementsByClassName("footer-sns")[0];
+
+		footerBusBody.classList.add("fade");
+		footerSNS.classList.add("fade");
+    }
+}
+
+function adjustContentHeight(clientHeight, offsetHeight) {
+	const content = document.getElementById("content");
+
+	const marginBottom = parseInt(content.style.marginBottom) || 0;
+	if (clientHeight > offsetHeight - marginBottom) {
+		content.style.marginBottom = (clientHeight - offsetHeight + marginBottom) + "px";
+	} else {
+		content.style.marginBottom = "0";
+    }
+}
+
 function getRandomBusNumber() {
 	const busNumbers = ["F9045", "F9045", "F9045", "9304", "9304", "0039"];
 
@@ -117,3 +154,9 @@ window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'UA-173968596-2');
+
+
+window.addEventListener("load", e => { refresh(); refresh(); });
+window.addEventListener("resize", refresh);
+window.addEventListener("orientationchange", refresh);
+window.addEventListener("scroll", refresh);
