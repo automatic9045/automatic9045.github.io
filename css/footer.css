@@ -33,6 +33,10 @@ footer {
         height: var(--bus-height);
     }
 
+        footer > .footer-bus.footer-bus-wo-sns {
+            margin-top: 0;
+        }
+
         footer > .footer-bus::after {
             content: "";
             position: absolute;

@@ -124,7 +124,7 @@ function checkFadeFooterBus(bottom) {
 		const footerSNS = footerBus.getElementsByClassName("footer-sns")[0];
 
 		footerBusBody.classList.add("fade");
-		footerSNS.classList.add("fade");
+		if (footerSNS !== undefined) footerSNS.classList.add("fade");
     }
 }
 
