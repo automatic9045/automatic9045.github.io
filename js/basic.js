@@ -142,7 +142,7 @@ function adjustContentHeight(clientHeight, offsetHeight) {
 }
 
 function getRandomBusNumber() {
-	const busNumbers = ["F9045", "F9045", "F9045", "9304", "9304", "0039"];
+	const busNumbers = ["F9045", "F9045", "F9045", "9304", "9304", "9310", "9310", "0039"];
 
 	const i = Math.floor(Math.random() * busNumbers.length);
 	return busNumbers[i];
