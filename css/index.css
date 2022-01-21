@@ -64,7 +64,6 @@
     position: absolute;
     width: 100%;
     background-color: white;
-    overflow-y: hidden;
 }
 
     #body.will-fade {
@@ -75,11 +74,9 @@
 
         #body.will-fade.fade {
             opacity: 1;
-            overflow-y: scroll;
         }
 
     #body.wont-fade {
-        overflow-y: scroll;
     }
 
 img.header {
