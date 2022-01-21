@@ -129,6 +129,8 @@ function checkFadeFooterBus(bottom) {
 }
 
 function adjustContentHeight(clientHeight, offsetHeight) {
+	if (offsetHeight == 0) return;
+
 	const content = document.getElementById("content");
 
 	const marginBottom = parseInt(content.style.marginBottom) || 0;
