@@ -33,7 +33,7 @@ function beginLoadAnimation() {
     busX = canvas.width;
     line1X = canvas.width + 100;
     line2X = canvas.width + 200;
-    isWidthShort = canvas.width < 960;
+    isWidthShort = canvas.width < 960 * 2;
 
     bus = document.createElement("canvas");
     bus.width = 326;
