@@ -141,6 +141,18 @@ function adjustContentHeight(clientHeight, offsetHeight) {
     }
 }
 
+function scrollTo(targetId) {
+	const target = document.getElementById(targetId);
+
+	if (target) {
+		location.hash = "#" + targetId;
+		document.documentElement.scrollTop = target.offsetTop - 100;
+		return true;
+	} else {
+		return false;
+    }
+}
+
 function getRandomBusNumber() {
 	const busNumbers = ["F9045", "F9045", "F9045", "9304", "9304", "9310", "9310", "0039"];
 
@@ -156,6 +168,37 @@ window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'UA-173968596-2');
+
+
+window.addEventListener("load", e => {
+	if (location.hash != "") scrollTo(location.hash.substring(1));
+});
+
+window.addEventListener("DOMContentLoaded", e => {
+	const links = (() => {
+		if (location.pathname == "/") {
+			return document.querySelectorAll("a[href^='" + location.pathname + "#']");
+		} else if (location.pathname.startsWith("/") && location.pathname.endsWith("/")) {
+			return document.querySelectorAll("a[href^='" + location.pathname + "#']", "a[href^='" + location.pathname.substring(1) + "#']", "a[href^='" + location.pathname.substring(0, location.pathname.length - 1) + "#']", "a[href^='" + location.pathname.substring(1, location.pathname.length - 2) + "#']");
+		} else if (location.pathname.startsWith("/")) {
+			return document.querySelectorAll("a[href^='" + location.pathname + "#']", "a[href^='" + location.pathname.substring(1) + "#']");
+		} else if (location.pathname.endsWith("/")) {
+			return document.querySelectorAll("a[href^='" + location.pathname + "#']", "a[href^='" + location.pathname.substring(0, location.pathname.length - 1) + "#']");
+		} else {
+			return document.querySelectorAll("a[href^='" + location.pathname + "#']");
+		}
+	})();
+
+	links.forEach(link => {
+		link.addEventListener("click", e => {
+			const href = e.currentTarget.getAttribute("href");
+			const targetId = href.split("#")[1];
+			
+			scrollTo(targetId);
+			e.preventDefault();
+		});
+	});
+});
 
 
 window.addEventListener("load", e => { refresh(); refresh(); });

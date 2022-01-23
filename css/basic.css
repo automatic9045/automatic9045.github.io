@@ -253,13 +253,6 @@ img.stretch {
         white-space: initial;
     }
 
-.anchor:before {
-    display: block;
-    margin-top: -82px;
-    padding-top: 82px;
-    content: "";
-}
-
 .hidden-counter {
     display: none;
 }
