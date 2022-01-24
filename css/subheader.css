@@ -23,6 +23,7 @@
 
     .subheader.bg.mars {
         background-image: url("/contents/mars/header.jpg");
+        background-color: #b1aa9f;
         position: relative;
         z-index: 0;
     }
