@@ -79,14 +79,28 @@
     #body.wont-fade {
     }
 
-img.header {
+.header {
     width: 100%;
     height: auto;
 }
 
-    img.header.pc {
-        display: block;
+    .header.pc {
+        background: url("/img/header_only-logo.svg") center / cover no-repeat #687481;
     }
+
+    .header.smartphone {
+        background: url("/img/header-smartphone_only-logo.svg") center / cover no-repeat #687481;
+    }
+
+    .header > img {
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+    }
+        .header > img.img-fade {
+            animation: fade-in 0.5s linear forwards;
+        }
 
 .counter {
     margin-bottom: 32px;
@@ -105,11 +119,11 @@ img.header {
         display: block;
     }
 
-    img.header.pc {
+    .header.pc {
         display: none;
     }
 
-    img.header.smartphone {
+    .header.smartphone {
         display: block;
     }
 }

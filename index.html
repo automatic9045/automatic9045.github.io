@@ -44,14 +44,19 @@
     </div>
     <div id="body">
         <script>prepareToFade();</script>
-        <img class="header pc" src="img/header.svg" width="1600" height="480" />
+        <div class="header pc">
+            <img src="img/header.svg" width="1600" height="480" />
+        </div>
         <header class="menu pc">
             <script>includeByClasses("menu.html", "menu pc", 0);</script>
         </header>
         <header class="menu menu-with-header smartphone">
             <script>includeByClasses("menu-small.html", "menu smartphone", 0);</script>
         </header>
-        <img class="header smartphone" src="img/header-smartphone.svg" width="1600" height="480" />
+        <div class="header smartphone">
+            <img src="img/header-smartphone.svg" width="1600" height="480" />
+        </div>
+        <script>registerHeaderImages();</script>
         <div id="content">
             <p class="counter">
                 Total Guests:

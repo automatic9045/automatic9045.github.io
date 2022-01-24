@@ -133,3 +133,12 @@ async function fade() {
 
     Cookies.set("do-fade", "1", { "expires": 0.25 });
 }
+
+function registerHeaderImages() {
+    const headerImages = document.querySelectorAll(".header > img");
+    headerImages.forEach(headerImage => {
+        headerImage.addEventListener("load", () => {
+            headerImage.classList.add("img-fade");
+        });
+    });
+}
