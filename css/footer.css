@@ -125,6 +125,7 @@ footer {
     footer > .footer-main {
         display: block;
         background: #f2f2f2;
+        color: #444;
     }
 
         footer > .footer-main hr {
@@ -133,11 +134,23 @@ footer {
             border-top: 1px solid #ddd;
         }
 
-        footer > .footer-main > small {
-            display: block;
-            padding: 15px 0;
-            text-align: center;
+        footer > .footer-main a {
+            text-decoration: underline;
+            color: inherit;
         }
+
+        footer > .footer-main > .footer-basic {
+            padding: 12px 0;
+        }
+
+            footer > .footer-main > .footer-basic > small {
+                display: block;
+                text-align: center;
+            }
+
+                footer > .footer-main > .footer-basic > small a {
+                    text-decoration: none;
+                }
 
 @media screen and (max-width: 959px) {
     footer > .footer-bus {

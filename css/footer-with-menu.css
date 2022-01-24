@@ -54,11 +54,6 @@
                 padding-left: 0;
             }
 
-            footer div.footermenu div.footermenu-content a {
-                text-decoration: underline;
-                color: #444;
-            }
-
 @media screen and (max-width: 1279px) {
     div.breadcrumb {
         padding-left: 16px;
