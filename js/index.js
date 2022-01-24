@@ -105,6 +105,8 @@ function prepareToFade() {
     if (Cookies.get("do-fade") != "1") {
         loadingDiv.classList.add("will-fade");
         bodyDiv.classList.add("will-fade");
+
+        window.addEventListener("load", fade);
     } else {
         loadingDiv.classList.add("wont-fade");
         bodyDiv.classList.add("wont-fade");
