@@ -114,6 +114,9 @@ function refresh() {
 }
 
 let isFooterBusVisible = false;
+let animationPlayCount = 0;
+let footerBusNumber = "";
+let footerBus2Number = "";
 
 function checkFadeFooterBus(bottom) {
 	const footer = document.getElementsByTagName("footer")[0];
@@ -130,11 +133,18 @@ function checkFadeFooterBus(bottom) {
 			const busNumbers = getRandomBusNumbers(2);
 			footerBusBody.style.backgroundImage = "url('/img/bus_side/" + busNumbers[0] + ".svg')";
 			footerBusBody2.style.backgroundImage = "url('/img/bus_side/" + busNumbers[1] + ".svg')";
-		}
 
-		footerBusBody.classList.add("fade");
-		footerBusBody2.classList.add("fade");
-		if (footerSNS !== undefined) footerSNS.classList.add("fade");
+			footerBusBody.classList.add("fade");
+			footerBusBody2.classList.add("fade");
+			if (footerSNS !== undefined) footerSNS.classList.add("fade");
+
+			animationPlayCount++;
+			footerBusNumber = busNumbers[0];
+			footerBus2Number = busNumbers[1];
+
+			footerBusBody2.addEventListener("animationend", onFooterBus2AnimationEnd);
+			gtag("event", "footer_bus_begin_play", { "event_category": "engagement", "event_label": footerBusNumber, "value": animationPlayCount });
+		}
 
 		isFooterBusVisible = true;
 	} else if (top > bottom) {
@@ -142,8 +152,14 @@ function checkFadeFooterBus(bottom) {
 		footerBusBody2.classList.remove("fade");
 		if (footerSNS !== undefined) footerSNS.classList.remove("fade");
 
+		footerBusBody2.removeEventListener("animationend", onFooterBus2AnimationEnd);
+
 		isFooterBusVisible = false;
     }
+}
+
+function onFooterBus2AnimationEnd() {
+	gtag("event", "footer_bus_finish_play", { "event_category": "engagement", "event_label": footerBus2Number });
 }
 
 function adjustContentHeight(clientHeight, offsetHeight) {
