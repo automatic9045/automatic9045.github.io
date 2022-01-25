@@ -104,7 +104,7 @@ function setHTMLByClasses(html, elementClasses, index) {
 
 function refresh() {
 	const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-	const bottom = scrollTop + document.documentElement.clientHeight;
+	const bottom = scrollTop + window.innerHeight;
 
 	const clientHeight = document.documentElement.clientHeight; // ブラウザ内の表示域
 	const offsetHeight = document.documentElement.offsetHeight; // ドキュメントの高さ
@@ -123,7 +123,7 @@ function checkFadeFooterBus(bottom) {
 	const footerBusBody2 = footerBus.getElementsByClassName("footer-bus-body-2")[0];
 	const footerSNS = footerBus.getElementsByClassName("footer-sns")[0];
 
-	if (top < bottom - 150) {
+	if (top + 150 < bottom) {
 		footerBusBody.classList.add("fade");
 		footerBusBody2.classList.add("fade");
 		if (footerSNS !== undefined) footerSNS.classList.add("fade");
