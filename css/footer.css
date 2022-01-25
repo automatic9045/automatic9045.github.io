@@ -1,7 +1,7 @@
 ﻿@keyframes fade-footer-bus {
     from {
         opacity: 0;
-        transform: translateX(calc(10vw + var(--bus-height) * 3.25));
+        transform: translateX(calc(10vw + var(--bus-height) * 3.5));
     }
 
     to {
@@ -13,7 +13,7 @@
 @keyframes fade-footer-bus-2 {
     0% {
         opacity: 0;
-        transform: translateX(calc(10vw + var(--bus-height) * 3.25));
+        transform: translateX(calc(10vw + var(--bus-height) * 3.5));
     }
 
     50% {
@@ -21,7 +21,7 @@
     }
 
     100% {
-        transform: translateX(calc(15px + var(--bus-height) * 3.25));
+        transform: translateX(calc(10px + var(--bus-height) * 3.5));
     }
 }
 
@@ -44,7 +44,7 @@ footer {
         content: "";
         position: relative;
         margin: 160px 10% 0 auto;
-        width: calc(var(--bus-height) * 3.25);
+        width: calc(var(--bus-height) * 3.5);
         height: var(--bus-height);
     }
 

@@ -156,7 +156,7 @@ function scrollTo(targetId) {
 }
 
 function getRandomBusNumber() {
-	const busNumbers = ["F9045", "F9045", "F9045", "9304", "9304", "9310", "9310", "0039"];
+	const busNumbers = ["0039", "F8926", "F8926", "F9001", "F9045", "F9045", "F9045", "9303", "9304", "9310", "9510"];
 
 	const i = Math.floor(Math.random() * busNumbers.length);
 	return busNumbers[i];

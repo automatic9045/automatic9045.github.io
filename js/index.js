@@ -36,7 +36,7 @@ function beginLoadAnimation() {
     isWidthShort = canvas.width < 960 * 2;
 
     bus = document.createElement("canvas");
-    bus.width = 326;
+    bus.width = 350;
     bus.height = 100;
     const busContext = bus.getContext("2d");
     const busImage = new Image();
