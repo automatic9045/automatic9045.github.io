@@ -121,9 +121,11 @@ function checkFadeFooterBus(bottom) {
 		const footerBus = footer.getElementsByClassName("footer-bus")[0];
 
 		const footerBusBody = footerBus.getElementsByClassName("footer-bus-body")[0];
+		const footerBusBody2 = footerBus.getElementsByClassName("footer-bus-body-2")[0];
 		const footerSNS = footerBus.getElementsByClassName("footer-sns")[0];
 
 		footerBusBody.classList.add("fade");
+		footerBusBody2.classList.add("fade");
 		if (footerSNS !== undefined) footerSNS.classList.add("fade");
     }
 }
