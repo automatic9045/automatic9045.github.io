@@ -113,6 +113,8 @@ function refresh() {
 	adjustContentHeight(clientHeight, offsetHeight);
 }
 
+let isFooterBusVisible = false;
+
 function checkFadeFooterBus(bottom) {
 	const footer = document.getElementsByTagName("footer")[0];
 	const top = footer.offsetTop;
@@ -124,13 +126,23 @@ function checkFadeFooterBus(bottom) {
 	const footerSNS = footerBus.getElementsByClassName("footer-sns")[0];
 
 	if (top + 150 < bottom) {
+		if (!isFooterBusVisible) {
+			const busNumbers = getRandomBusNumbers(2);
+			footerBusBody.style.backgroundImage = "url('/img/bus_side/" + busNumbers[0] + ".svg')";
+			footerBusBody2.style.backgroundImage = "url('/img/bus_side/" + busNumbers[1] + ".svg')";
+		}
+
 		footerBusBody.classList.add("fade");
 		footerBusBody2.classList.add("fade");
 		if (footerSNS !== undefined) footerSNS.classList.add("fade");
+
+		isFooterBusVisible = true;
 	} else if (top > bottom) {
 		footerBusBody.classList.remove("fade");
 		footerBusBody2.classList.remove("fade");
 		if (footerSNS !== undefined) footerSNS.classList.remove("fade");
+
+		isFooterBusVisible = false;
     }
 }
 
@@ -159,11 +171,19 @@ function scrollTo(targetId) {
     }
 }
 
-function getRandomBusNumber() {
-	const busNumbers = ["0039", "F8926", "F8926", "F9001", "F9045", "F9045", "F9045", "9303", "9304", "9310", "9510"];
+function getRandomBusNumbers(count = 1) {
+	let busNumbers = ["0039", "F8926", "F8926", "F9001", "F9045", "F9045", "F9045", "9303", "9304", "9310", "9510"];
+	const pickedBusNumbers = [];
 
-	const i = Math.floor(Math.random() * busNumbers.length);
-	return busNumbers[i];
+	for (let i = 0; i < count; i++) {
+		const j = Math.floor(Math.random() * busNumbers.length);
+		const pickedBusNumber = busNumbers[j];
+
+		busNumbers = busNumbers.filter(busNumber => busNumber != pickedBusNumber);
+		pickedBusNumbers.push(pickedBusNumber);
+    }
+
+	return pickedBusNumbers;
 }
 
 
