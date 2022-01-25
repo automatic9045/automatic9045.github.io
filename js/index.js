@@ -40,7 +40,7 @@ function beginLoadAnimation() {
     bus.height = 100;
     const busContext = bus.getContext("2d");
     const busImage = new Image();
-    busImage.src = "/img/bus_side_" + getRandomBusNumber() + ".svg";
+    busImage.src = "/img/bus_side/" + getRandomBusNumber() + ".svg";
     busImage.onload = () => {
         busContext.drawImage(busImage, 0, 0, bus.width, bus.height);
         startTime = Date.now();

@@ -7,12 +7,12 @@ switch (elements.length) {
 		return;
 
 	case 1:
-		elements[0].style.backgroundImage = "url('/img/bus_side_" + busNumber + ".svg')";
+		elements[0].style.backgroundImage = "url('/img/bus_side/" + busNumber + ".svg')";
 		break;
 
 	default:
 		Array.from(elements).forEach(element => {
-			element.style.backgroundImage = "url('/img/bus_side_" + busNumber + ".svg')";
+			element.style.backgroundImage = "url('/img/bus_side/" + busNumber + ".svg')";
 		});
 		break;
 }
