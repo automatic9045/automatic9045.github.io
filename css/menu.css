@@ -18,8 +18,8 @@
             transition: background-color linear 200ms;
         }
 
-            .menu .menu-content li:before,
-            .menu .menu-content li:last-child:after {
+            .menu .menu-content li::before,
+            .menu .menu-content li:last-child::after {
                 display: block;
                 position: absolute;
                 width: 1px;
@@ -30,7 +30,7 @@
                 background-color: #ccc;
             }
 
-            .menu .menu-content li:after {
+            .menu .menu-content li::after {
                 right: 0;
             }
 

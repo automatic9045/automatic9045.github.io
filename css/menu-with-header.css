@@ -96,8 +96,8 @@
                     }
 
                         .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-hamburger > .menu-button-content-hamburger-line,
-                        .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-hamburger > .menu-button-content-hamburger-line:before,
-                        .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-hamburger > .menu-button-content-hamburger-line:after {
+                        .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-hamburger > .menu-button-content-hamburger-line::before,
+                        .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-hamburger > .menu-button-content-hamburger-line::after {
                             display: inline-block;
                             position: absolute;
                             margin: auto;
@@ -114,11 +114,11 @@
                             top: 0;
                         }
 
-                            .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-hamburger > .menu-button-content-hamburger-line:before {
+                            .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-hamburger > .menu-button-content-hamburger-line::before {
                                 top: -14px;
                             }
 
-                            .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-hamburger > .menu-button-content-hamburger-line:after {
+                            .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-hamburger > .menu-button-content-hamburger-line::after {
                                 top: 14px;
                             }
 
@@ -154,7 +154,7 @@
                         line-height: 24px;
                     }
 
-                    .menu.menu-with-header > div > .menu-content > li:before {
+                    .menu.menu-with-header > div > .menu-content > li::before {
                         display: block;
                         position: absolute;
                         width: 100%;
