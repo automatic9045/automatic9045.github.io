@@ -20,14 +20,13 @@
 
             .menu .menu-content li::before,
             .menu .menu-content li:last-child::after {
+                content: "";
                 display: block;
                 position: absolute;
-                width: 1px;
                 height: 40px;
                 top: 50%;
                 margin-top: -20px;
-                content: "";
-                background-color: #ccc;
+                border-right: 1px solid #ccc;
             }
 
             .menu .menu-content li::after {
