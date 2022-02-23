@@ -9,7 +9,7 @@
     <meta name="author" content="Automatic9045" />
     <meta property="og:site_name" content="岡オカ営業所" />
     <meta property="og:title" content="BVE関連 - 岡オカ営業所" />
-    <meta property="og:description" content="BVEの制作支援ツール、ATSプラグイン等を公開予定です。" />
+    <meta property="og:description" content="BVE向けのATSプラグインを公開しています。" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="https://automatic9045.github.io/img/ogp.png" />
     <meta property="og:locale" content="ja_JP" />
@@ -37,27 +37,50 @@
         </small>
         <h1>BVE関連</h1>
         <p>
-            BVEの制作支援ツール、ATSプラグイン等を公開予定です。
+            BVE向けのATSプラグイン<!--、制作支援ツール-->や、各種開発に役立つ小ネタなどを公開しています。
         </p>
 
-        <!--<h2>BVE 3D Map Editor（開発中）</h2>
-        <p>
-            3Dの画面で直感的にマップデータを作成出来るソフトウェアです。<br />
+        <h2>DetailManager.NET</h2>
+        <p class="strong">
+            【BVE5・6向け】
         </p>
-        <h3>現在の進捗</h3>
         <p>
-            設計中です。<br />
-            大規模ソフトウェアにつき、かなり時間がかかります。2023～2024年頃リリース予定。
-        </p>-->
-        <!--<h2>架空NR千浜・吉浜線アドオン（開発中）</h2>
-        <p>
-            3Dの画面で直感的にマップデータを作成出来るソフトウェアです。<br />
+            C#など.NET系の言語で記述されたATSプラグインを読み込めるようにするプラグインです。
         </p>
-        <h3>現在の進捗</h3>
+        <h3>機能のハイライト</h3>
+        <ul>
+            <li>DllExportによる関数の公開はDetailManager.NETが行うので、ATSプラグイン側でDllExportをインストールする手間がなくなります。</li>
+            <li>簡単に開発を始められるテンプレートも同梱しています。複雑な環境構築は不要です。</li>
+        </ul>
+        <p class="strong"><a href="https://github.com/automatic9045/DetailManager.NET">もっと詳しく(GitHubへ)>></a></p>
+        <!--
+        <h2>AtsEX：ATSプラグイン拡張キット</h2>
+        <p class="strong">
+            【BVE5・6向け】
+        </p>
         <p>
-            現在関係者のみに配布しています。<br />
-            一般公開はまだまだ先になる見込みです。
-        </p>-->
+            ATSプラグインの機能を拡張するプラグインです。今までのATSプラグインではできなかった、新しい表現が可能になります。
+        </p>
+        <h3>追加される機能の例</h3>
+        <ul>
+            <li>路線側にプラグインを埋め込めるようになります</li>
+            <li>速度や位置、時刻をプラグインから直接変更できます</li>
+        </ul>
+        <p class="strong"><a href="/contents/bve/AtsEX/">もっと詳しく>></a></p>
+
+        <h2>小ネタ</h2>
+        <h3>エラーとその意味の一覧</h3>
+        <p>
+            「Cannot create Direct 3D Device.」や「Cannot load.」など、いまいちよく分からないエラーについてその意味と対処法を解説します。
+        </p>
+        <p class="strong"><a href="/contents/bve/tips/error.html">もっと詳しく>></a></p>
+
+        <h3>【.NET】ATSプラグインで他のアセンブリ（dll）を参照する</h3>
+        <p>
+            ATSプラグインで他のアセンブリを使用する場合、単に参照に加えただけではエラーが発生してしまいます。<br />
+            ここでは、AssemblyResolveイベントを処理することで参照しているアセンブリを正しく読み込む方法を説明します。
+        </p>
+        <p class="strong"><a href="/contents/bve/tips/asm-resolve.html">もっと詳しく>></a></p>-->
     </div>
     <footer class="footer">
         <script>includeByClasses("footer.html", "footer", 0);</script>

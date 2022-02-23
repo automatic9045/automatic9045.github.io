@@ -79,6 +79,11 @@ a.constr {
     pointer-events: none;
 }
 
+code {
+    font-size: 14px;
+    line-height: 1.25em;
+}
+
 small.breadcrumb a {
     color: black;
 }
@@ -199,6 +204,16 @@ img.no-horizonal-margin {
 
 img.stretch {
     width: 100%;
+}
+
+p.strong {
+    font-weight: bold;
+}
+
+p.more {
+    margin-right: 32px;
+    text-align: right;
+    font-weight: bold;
 }
 
 .bold-center {
