@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+    <meta name="theme-color" content="#00A" />
+
+    <meta name="author" content="Automatic9045" />
+    <meta property="og:site_name" content="岡オカ営業所" />
+    <meta property="og:title" content="AtsEX ATSプラグイン拡張キット - 岡オカ営業所" />
+    <meta property="og:description" content="ATSプラグインの機能を拡張するプラグインです。今までのATSプラグインではできなかった、新しい表現が可能になります。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://automatic9045.github.io/img/ogp.png" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@atF9045" />
+
+    <title>小ネタ：エラーとその意味の一覧 - BVE関連 - 岡オカ営業所</title>
+    <base href="https://automatic9045.github.io" />
+    <link rel="icon" type="image/svg+xml" href="img/bus.svg">
+    <link rel="apple-touch-icon" type="image/png" href="img/bus.png">
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/copyright.js"></script>
+</head>
+<body>
+    <header class="menu menu-with-header">
+        <script>includeByClasses("menu-small.html", "menu", 0);</script>
+    </header>
+    <div id="content">
+        <small class="breadcrumb">
+            <a href="/">HOME</a> > <a href="/contents/bve/">BVE関連</a> > 小ネタ：エラーとその意味の一覧
+        </small>
+        <h1>小ネタ：エラーとその意味の一覧</h1>
+        <p>
+            「Cannot create Direct 3D Device.」や「Cannot load.」など、いまいちよく分からないBVEのエラーについてその意味と対処法を解説します。<br />
+            <mark>非プログラマーの読者様向けに、厳密さよりも分かりやすさを重視して意訳しています</mark>。
+        </p>
+
+
+        <h3>INDEX</h3>
+        <h4>起動時のエラー</h4>
+        <ul>
+            <li><a href="/contents/bve/tips/error.html#startup-direct3d">Cannot create Direct3D device.</a></li>
+            <li><a href="/contents/bve/tips/error.html#startup-directsound">Cannot create DirectSound device.</a></li>
+        </ul>
+
+        <h4>ATSプラグイン読込時のエラー</h4>
+        <ul>
+            <li><a href="/contents/bve/tips/error.html#ats-load">Cannot load.</a></li>
+            <li><a href="/contents/bve/tips/error.html#ats-bit">Cannot load XX-bit ATS plugin. The current process of BVE Trainsim is XX-bit.</a></li>
+            <li><a href="/contents/bve/tips/error.html#ats-ver-null">Cannot check version.</a></li>
+            <li><a href="/contents/bve/tips/error.html#ats-ver-illegal">File version not supported.</a></li>
+        </ul>
+
+
+        <h2>起動時のエラー</h2>
+        <h3 id="startup-direct3d">Cannot create Direct3D device.</h3>
+        <p class="strong">
+            Direct3D（DirectXに含まれるサービスの1つ）を正しく読み込めませんでした。
+        </p>
+        <p>
+            DirectXを読み込めていません。<mark>DirectX エンドユーザーランタイム</mark>はインストールしましたか？
+        </p>
+        <p>
+            BVEは「DirectX9」という古いバージョンのDirectX上で動作します。
+            <strong>DirectXがインストールされているPCでこのエラーが発生する場合は、BVEが対応している古いバージョンのDirectXがインストールされていない可能性が高いです</strong>。
+            <a href="https://www.microsoft.com/ja-jp/download/details.aspx?id=35&" target="_blank">Microsoftのホームページ</a>からインストールしてください。
+        </p>
+
+        <h3 id="startup-directsound">Cannot create DirectSound device.</h3>
+        <p class="strong">
+            DirectSound（DirectXに含まれるサービスの1つ）を正しく読み込めませんでした。
+        </p>
+        <p>
+            詳細は「<a href="/contents/bve/tips/error.html#startup-direct3d">Cannot create DirectSound device.</a>」へ
+        </p>
+
+
+        <h2>ATSプラグイン読込時のエラー</h2>
+        <h3 id="ats-load">Cannot load.</h3>
+        <p class="strong">
+            様々な原因のエラーでこのメッセージが表示されるため、原因を1つに特定できません。
+        </p>
+        <p>
+            よくある理由としては次のようなものがあります。
+        </p>
+
+        <h4>64bit版、32bit版を取り違えている</h4>
+        <p>
+            BVE5でBVE6向けのATSプラグインを読み込んでいたり、逆にBVE5でBVE6向けのATSプラグインを読み込んでいたりするとこのエラーが発生します。<br />
+            具体的には、車両（Vehicle）ファイルにて「Ats64」にBVE5向けの32bitプラグインを設定してしまったときなどに発生します。
+        </p>
+
+        <h4>ATSプラグイン内で参照している他のdllの読み込みに失敗している</h4>
+        <p>
+            ATSプラグインでよくある、というよりかは、BVEのATSプラグインを読み込む処理と同じようなコードを書いているときにやりがちなミスです。<br />
+            ATSプラグイン本体の他に別途必要なdllがある場合は確認してください。
+        </p>
+
+        <h3 id="ats-bit">Cannot load XX-bit ATS plugin. The current process of BVE Trainsim is XX-bit.</h3>
+        <p class="strong">
+            現在使用しているバージョンのBVE向けのATSプラグインが設定されていません。
+        </p>
+        <p>
+            具体的には、車両（Vehicle）ファイルに「Ats32」のみ設定した車両をBVE6で読み込んだり、逆に「Ats64」のみ設定した車両をBVE5で読み込んだときに発生します。<br />
+            なお、「Ats64」にBVE5向けの32bit ATSプラグインを設定してしまったときにもこのエラーが発生しそうなものですが、
+            その場合は「<a href="/contents/bve/tips/error.html#ats-load">Cannot load.</a>」が発生します。
+        </p>
+
+        <h3 id="ats-ver-null">Cannot check version.</h3>
+        <p class="strong">
+            ATSプラグインに必要な機能が実装されていません。
+        </p>
+
+        <h4>ユーザー / 車両・マップ開発者向け解説</h4>
+        <p>
+            ATSプラグインの不具合である可能性が非常に高いです。残念ながらこちらでできる対処法はありません。<br />
+            開発者に問い合わせれば修正してもらえるかもしれません。
+        </p>
+
+        <h4>プラグイン開発者向け解説</h4>
+        <p>
+            <a href="http://bvets.net/jp/edit/formats/vehicle/atsfunctions.html">GetPluginVersion関数</a>が定義されていません。この関数はATSプラグインとして使用するために必要です。<br />
+            ドキュメントやサンプルコードなどを参考に、GetPluginVersion関数を定義してください。
+        </p>
+
+        <h3 id="ats-ver-illegal">File version not supported.</h3>
+        <p class="strong">
+            ATSプラグインのバージョンが古いか、ATSプラグインに不具合があります。
+        </p>
+
+        <h4>ユーザー / 車両・マップ開発者向け解説</h4>
+        <p>
+            今が2020年代なのであれば、ATSプラグインの不具合である可能性が非常に高いです。残念ながらこちらでできる対処法はありません。<br />
+            開発者に問い合わせれば修正してもらえるかもしれません。
+        </p>
+        <p>
+            今が2030年代以降であれば、ATSプラグインのバージョンが古い可能性も考えられます。この場合も、残念ながらこちらでできる対処法はありません。
+        </p>
+
+        <h4>プラグイン開発者向け解説</h4>
+        <p>
+            <a href="http://bvets.net/jp/edit/formats/vehicle/atsfunctions.html">GetPluginVersion関数</a>が返す値が不正です。
+            この関数は常にATS_VERSIONで定義された定数（0x00020000、int型）を返す必要があります。<br />
+            ドキュメントやサンプルコードなどを参考に、GetPluginVersion関数を修正してください。
+        </p>
+
+    </div>
+    <footer class="footer">
+        <script>includeByClasses("footer.html", "footer", 0);</script>
+    </footer>
+</body>
+</html>
