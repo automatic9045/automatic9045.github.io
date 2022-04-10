@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+    <meta name="theme-color" content="#00A" />
+
+    <meta name="author" content="Automatic9045" />
+    <meta property="og:site_name" content="岡オカ営業所" />
+    <meta property="og:title" content="AtsEX ATSプラグイン拡張キット - 岡オカ営業所" />
+    <meta property="og:description" content="ATSプラグインの機能を拡張するプラグインです。今までのATSプラグインではできなかった、新しい表現が可能になります。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://automatic9045.github.io/img/ogp.png" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@atF9045" />
+
+    <title>AtsEX ATSプラグイン拡張キット - 岡オカ営業所</title>
+    <base href="https://automatic9045.github.io" />
+    <link rel="icon" type="image/svg+xml" href="img/bus.svg">
+    <link rel="apple-touch-icon" type="image/png" href="img/bus.png">
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <link rel="stylesheet" type="text/css" href="/copyright/highlight/vs2015.min.css">
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/copyright.js"></script>
+    <script type="text/javascript" src="/copyright/highlight/highlight.min.js"></script>
+</head>
+<body>
+    <header class="menu menu-with-header">
+        <script>includeByClasses("menu-small.html", "menu", 0);</script>
+    </header>
+    <div id="content">
+        <small class="breadcrumb">
+            <a href="/">HOME</a> > <a href="/contents/bve/">BVE関連</a> > AtsEX - ATSプラグイン拡張キット for BVE 5 & 6
+        </small>
+        <h1>AtsEX - ATSプラグイン拡張キット for BVE 5 & 6</h1>
+        <p>
+            ATSプラグインの機能を拡張するプラグインです。今までのATSプラグインではできなかった、新しい表現が可能になります。<br />
+            ATSプラグインの要領で車両に組み込んで動作させます。
+        </p>
+
+        <h2>はじめに……ユーザー向けコンテンツ一覧</h2>
+        <h3>AtsEXを試してみる</h3>
+        <p>
+            以下よりサンプル<!--マップ・-->車両をダウンロードできます。<br />
+            現時点で完成している機能を手軽に試せます。
+        </p>
+        <p>
+            <a href="https://github.com/automatic9045/AtsEX/releases" class="strong">リリース - automatic9045/AtsEX (GitHub)</a>
+        </p>
+
+        <h3>BVE5.8でAtsEX搭載車両を使用したい場合</h3>
+        <p>
+            そのままでは使用できませんが、BVE5.8本体に少しだけ手を加えると動作するようになります。<br />
+            詳細→<strong>準備中</strong><!--<a href="/contents/bve/AtsEX/tips/" class="strong constr">BVE5でAtsEXを動作させる方法</a>-->
+        </p>
+
+        <h3>マッププラグインが組み込まれたマップをAtsEX非搭載車両で運転したい場合</h3>
+        <p>
+            <!--<a href="/contents/bve/AtsEX/tool/vehiclecnv" class="strong">車両コンバーター</a>で車両を変換してください。-->
+            車両にAtsEXを搭載すれば動作するようになります。簡単な操作で車両にAtsEXを搭載できるコンバーターを開発する予定です。
+        </p>
+
+        <h2>以下のコンテンツは開発者向けです</h2>
+        <p>
+            以下のコンテンツは<mark>マップアドオン・車両アドオン・ATSプラグイン開発者向け</mark>です。<br />
+            ユーザーの皆様は各車両・マップアドオン公開ページからアドオンをダウンロードして下さい。<strong>このページからAtsEX単体をダウンロードする必要はありません</strong>。
+        </p>
+
+        <h2>特長</h2>
+        <h3>BVEの何もかもを編集可能に</h3>
+        <p>
+            標準機能で提供されているものに加え、走行位置、速度、現在時刻から、駅リストやストラクチャ、サウンド、BVE本体のフォーム（ウィンドウ）、右クリックメニューまで、<mark>BVEで使用されている幅広いデータを取得・設定可能に拡張します</mark>。<br />
+            かゆい所に手が届く自由度の高さ、何を作るかはあなた次第です。
+        </p>
+        <!--<p class="strong"><a href="/contents/bve/AtsEX/feat/status.html">もっと詳しく>></a></p>-->
+        <!--
+        <h3>テクスチャの動的書きかえに対応</h3>
+        <p>
+            zbx1425氏が開発された車両・マップ内のテクスチャを動的に変更できるようにするライブラリ
+            「<a href="https://github.com/zbx1425/DXDynamicTexture" target="_blank">DXDynamicTexture for BVE Trainsim 5/6</a>」を内蔵しています。<br />
+            AtsEXの他の機能と連携することで、<mark>車両プラグインからも、マッププラグインからも、簡単に運転台パネルやマップ内のテクスチャを書きかえることができます</mark>。
+        </p>-->
+        <!--<p class="strong"><a href="/contents/bve/AtsEX/feat/dynamictexture.html">もっと詳しく>></a></p>-->
+
+        <h3>マップにプラグインを埋め込める「マッププラグイン」機能（近日実装）</h3>
+        <p>
+            車両よりもマップへの依存度が高いプラグインのために、マップにプラグインを埋め込める「マッププラグイン」機能を搭載しています。<br />
+            <mark>車両側のATSプラグインにAtsEXを組み込んでおくだけで、AtsEXがマップに設定されたプラグインを自動で読み込みます</mark>。
+        </p>
+        <p>
+            マップ内のテクスチャの書きかえやスタフの表示など、高度な演出を取り入れようとしたとき、従来はATSプラグインとして車両に組み込む必要がありました。
+            そのためそのシナリオで使用できる車両が限られてしまう他、車両を改造することになるので車両制作者との協力が必要不可欠でした。<br />
+            AtsEXのマッププラグイン機能を利用することでマップに関係する処理は全てマップに同梱することができるようになり、
+            そういった<mark>高度な演出を含むシナリオから使用可能車両の制限を無くすことができます</mark>。
+        </p>
+        <!--<p>
+            また、<mark>プラグイン独自の構文をマップ内に組み込むこともできます</mark>。特定の距離程を通過した時にプラグインを実行、といったことが可能になります。
+        </p>-->
+        <!--<p class="strong"><a href="/contents/bve/AtsEX/feat/mpi.html">もっと詳しく>></a></p>-->
+
+        <h3>.NETによるオブジェクト指向プログラミングの強力なサポート</h3>
+        <p>
+            従来のC++ベースのATSプラグインはC#などのオブジェクト指向言語との親和性があまり良くありませんでしたが、
+            AtsEXは<mark>オブジェクト指向プログラミングに最適化したラッパーを提供</mark>。さらに、DLLExportの複雑な導入作業も全てAtsEXが肩代わりします。
+        </p>
+        <p>
+            大規模なプロジェクトでも可読性が格段に向上します。AtsEXで拡張された機能を使わない開発にもおすすめです。
+        </p>
+        <!--<p class="strong"><a href="/contents/bve/AtsEX/feat/oop.html">もっと詳しく>></a></p>-->
+
+        <h3>Any CPUビルドに対応</h3>
+        <p>
+            BVE6の登場によって、ATSプラグインは64bit版、32bit版の2つを準備しなければならなくなりました。<br />
+            しかし、<mark>AtsEXならプラグインはAny CPUビルドでOK</mark>。地味～に面倒だった2バージョンの準備はもう要りません。
+        </p>
+        <!--<p class="strong"><a href="/contents/bve/AtsEX/feat/anycpu.html">もっと詳しく>></a></p>-->
+
+        <h2>AtsEXによって作れるようになるプラグインの例</h2>
+        <h3>車両プラグインの例</h3>
+        <h4>ポーズで止まるサウンド系プラグイン</h4>
+        <p>
+            モーター音やエンジン音を拘ろうとした場合、BVEの標準機能では足りずプラグインを開発することになるのですが、
+            従来はポーズ中であるかどうかを判別できなかったため、ポーズ中であっても音を止めることはできませんでした。<br />
+            AtsEXからポーズ中であるかどうかを取得することで、しっかりとポーズ中に音を止めることができます。
+        </p>
+        <h4>ワンマンモニターの再現</h4>
+        <p>
+            従来は、モニターにそれらしい画像を表示させることで疑似再現するのが一般的でした。
+            AtsEXではBVE本体がマップの描画に使用しているストラクチャの3Dモデルを取得できるため、Direct3Dを駆使することで実際の景色をモニターに表示することができます。
+        </p>
+
+        <h3>マッププラグインの例</h3>
+        <h4>車止めで強制停止</h4>
+        <p>
+            従来のATSプラグインでも速度を取得することはできましたが、設定することはできませんでした。<br />
+            AtsEXでは速度の設定にも対応しているため、特定の距離程を通過した時に速度をゼロにすることで実装可能です。
+        </p>
+        <h4>手動での駅ワープを必要としないスイッチバックの表現</h4>
+        <p>
+            スイッチバックを含むシナリオでは、到着時用の駅、方向転換後発車時用の駅を別々に用意し、当該駅到着後に時刻表から発車時用の駅にワープすることで疑似的に再現するのが一般的です。<br />
+            AtsEXでは現在位置、現在時刻の設定に対応しているため、当該駅到着を検知後に発車時用の駅が存在する距離程にワープさせ、方向転換に要した時間を現在時刻に足すことで、
+            スイッチバックの表現を自動化することができます。
+        </p>
+        <h4>逝っとけダイヤの再現</h4>
+        <p>
+            従来のBVEでは、表示される時刻表でバレてしまうため、種別・行先変更を伴う大規模なダイヤ乱れを再現することは困難でした。<br />
+            AtsEXでは駅リストの編集に加え時刻表やダイヤグラムの再描画にも対応しているため、輸送指令からの指示に合わせて、運行中に後から運行予定を変更することができます。
+        </p>
+
+        <h2>AtsEX 車両プラグインのサンプル</h2>
+        <p>
+            AtsEX SDK同梱の車両プラグイン 状態取得・設定サンプルより抜粋（一部改変しています）
+        </p>
+        <pre><code id="sample" class="language-csharp">
+        </code></pre>
+        <script>includeById("/contents/bve/AtsEX/codes/oop.cs", "sample");</script>
+
+        <h2>対応BVEバージョン</h2>
+        <p>
+            少しでも異なるバージョンでは正常に動作しない可能性が高いです。
+        </p>
+        <h3>BVE Trainsim 5</h3>
+        <ul>
+            <li>5.8（Version 5.8.7554.391）<sup>※</sup></li>
+        </ul>
+        <p>
+            <small>
+                ※そのままでは使用できませんが、BVE5.8本体に少しだけ手を加えると動作するようになります。
+                詳細→準備中<!--<a href="/contents/bve/AtsEX/tips/" class="strong constr">BVE5でAtsEXを動作させる方法</a>-->
+            </small>
+        </p>
+        <h3>BVE Trainsim 6</h3>
+        <ul>
+            <li>6.0（Version 6.0.7554.619）</li>
+        </ul>
+
+        <!--<h2>よくある質問</h2>
+        <p>
+            こちら→<a href="/contents/bve/AtsEX/faq/">よくある質問</a>
+        </p>-->
+
+        <h2>ダウンロード</h2>
+        <p>
+            AtsEX本体の他、サンプル<!--マップ・-->車両を同梱しています。<br />
+            現時点で完成している機能を手軽に試せます。
+        </p>
+        <p>
+            <a href="https://github.com/automatic9045/AtsEX/releases" class="strong">リリース - automatic9045/AtsEX (GitHub)</a>
+        </p>
+
+        <!--<h2>Wiki</h2>
+        <p>
+            こちら→<a href="https://github.com/automatic9045/AtsEX/wiki">AtsEX Wiki（GitHub）</a>
+        </p>-->
+
+        <script>hljs.highlightAll();</script>
+    </div>
+    <footer class="footer">
+        <script>includeByClasses("footer.html", "footer", 0);</script>
+    </footer>
+</body>
+</html>

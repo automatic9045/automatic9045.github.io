@@ -73,6 +73,10 @@ a:active {
     color: -webkit-link;
 }
 
+a.strong {
+    font-weight: bold;
+}
+
 a.constr {
     color: #ee0000 !important;
     text-decoration: none !important;
