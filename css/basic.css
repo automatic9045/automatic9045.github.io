@@ -220,6 +220,10 @@ p.more {
     font-weight: bold;
 }
 
+strong.more-strong {
+    color: red;
+}
+
 .bold-center {
     text-align: center;
     font-weight: bold;
