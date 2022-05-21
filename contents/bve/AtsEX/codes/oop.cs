@@ -1,27 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Automatic9045.AtsEx.PluginHost;
+using Automatic9045.AtsEx.PluginHost.Helpers;
 
 namespace Automatic9045.VehiclePlugins.StateViewer {
     // 規定のクラスを継承することでプラグインとみなされます
-    public class StateViewer : AtsExPlugin, IDisposable {
+    public class StateViewer : AtsExPluginBase, IDisposable {
         private StateForm Form;
         private ToolStripMenuItem MenuItem;
 
-        public StateViewer() : base() {
+        public StateViewer(HostServiceCollection services) : base(services) {
+            InstanceStore.Initialize(App, BveHacker);
+
             // 右クリックメニューに独自のメニューを追加可能
-            MenuItem = BveHacker.AddCheckableMenuItemToContextMenu("状態ウィンドウを表示", MenuItemCheckedChanged);
-
-            App.Started += Started;
-        }
-
-        private void Started(StartedEventArgs e) {
-            if (!(Form is null)) DisposeForm();
+            MenuItem = ContextMenuHacker.Instance.AddCheckableMenuItem("状態ウィンドウを表示", MenuItemCheckedChanged);
 
             MenuItem.Checked = false;
 
@@ -31,12 +24,16 @@ namespace Automatic9045.VehiclePlugins.StateViewer {
             Form.WindowState = FormWindowState.Normal;
 
             MenuItem.Checked = true;
-            BveHacker.MainForm.Focus();
+            BveHacker.MainFormSource.Focus();
+        }
+
+        public override void Tick() {
+            Form?.Tick();
         }
 
         private void MenuItemCheckedChanged(object sender, EventArgs e) {
             if (MenuItem.Checked) {
-                Form.Show(BveHacker.MainForm);
+                Form.Show(BveHacker.MainFormSource);
             } else {
                 Form.Hide();
             }
@@ -47,12 +44,10 @@ namespace Automatic9045.VehiclePlugins.StateViewer {
             MenuItem.Checked = false;
         }
 
-        private void DisposeForm() {
+        public void Dispose() {
             Form.FormClosing -= FormClosing;
             Form.Close();
             Form.Dispose();
         }
-
-        public void Dispose() => DisposeForm();
     }
 }
