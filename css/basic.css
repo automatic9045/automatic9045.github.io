@@ -276,6 +276,75 @@ strong.more-strong {
         white-space: initial;
     }
 
+div.note {
+    --note-icon-height: 32px;
+    --note-icon-text: "";
+    --note-icon-text-height: 1.25;
+    --note-header-text: "???";
+    --note-background-color: #f7f7f7; /* a = 0x10/0xff = 1/16 = 0.0625 */
+    --note-color: #808080;
+    position: relative;
+    margin: calc(24px + var(--note-icon-height) * 0.625) 0 24px calc(var(--note-icon-height) * 0.625);
+    padding: 16px 16px 16px 24px;
+    width: calc(100% - var(--note-icon-height) * 0.625);
+    background-color: var(--note-background-color);
+    color: #444;
+}
+
+    div.note::before {
+        content: var(--note-icon-text);
+        display: block;
+        position: absolute;
+        left: calc(var(--note-icon-height) * -0.625);
+        top: calc(var(--note-icon-height) * -0.625);
+        height: var(--note-icon-height);
+        width: var(--note-icon-height);
+        border-radius: 50%;
+        background-color: var(--note-color);
+        color: white;
+        vertical-align: middle;
+        text-align: center;
+        font-size: calc(var(--note-icon-height) * 0.8);
+        line-height: var(--note-icon-text-height);
+        font-weight: 700;
+    }
+
+    div.note::after {
+        content: var(--note-header-text);
+        display: block;
+        position: absolute;
+        left: calc(var(--note-icon-height) * 0.625);
+        top: -16px;
+        width: auto;
+        color: var(--note-color);
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 700;
+    }
+
+    div.note.note-info {
+        --note-icon-text: "i";
+        --note-header-text: "備考";
+        --note-background-color: #efeffb;
+        --note-color: #0a0ac1; /* H=240, S=90, L=40 */
+    }
+
+    div.note.note-warn {
+        --note-icon-text: "!";
+        --note-icon-text-height: 1.2;
+        --note-header-text: "注意";
+        --note-background-color: #fdf9ef;
+        --note-color: #e89f0c; /* H=40, S=90, L=48 */
+    }
+
+    div.note.note-alert {
+        --note-icon-text: "×";
+        --note-icon-text-height: 1.1;
+        --note-header-text: "警告";
+        --note-background-color: #fdefef;
+        --note-color: #e80c0c; /* H=0, S=90, L=48 */
+    }
+
 .hidden-counter {
     display: none;
 }
@@ -301,6 +370,10 @@ strong.more-strong {
 @media screen and (max-width: 959px) {
     body {
         font-size: 15px;
+    }
+
+    div.note {
+        font-size: 0.875em;
     }
 }
 
