@@ -2,7 +2,7 @@
     font-family: "NotoSansJPLight";
     font-style: normal;
     font-weight: 400;
-    src: url("/fonts/NotoSansJP-Light-Regular.woff") format("woff");
+    src: url("/fonts/NotoSansJP-Light-Regular.woff2") format("woff2"), url("/fonts/NotoSansJP-Light-Regular.woff") format("woff");
     font-display: swap;
 }
 
@@ -18,7 +18,7 @@
     font-family: "NotoSansJPLight";
     font-style: normal;
     font-weight: 700;
-    src: url("/fonts/NotoSansJP-Light-Bold.woff") format("woff");
+    src: url("/fonts/NotoSansJP-Light-Bold.woff2") format("woff2"), url("/fonts/NotoSansJP-Light-Bold.woff") format("woff");
     font-display: swap;
 }
 
