@@ -1,28 +1,42 @@
 ﻿.menu {
 }
 
-    .menu.menu-with-header > div {
-        margin: 0 auto;
-        width: 1280px;
+    .menu.menu-with-header {
+        --height: 64px;
+        background-color: transparent;
     }
 
-        .menu.menu-with-header > div > .header-img-small {
-            display: flex;
-            float: left;
-            margin-left: 12px;
-            width: 280px;
-            height: 64px;
+        .menu.menu-with-header > div {
+            margin: 0 auto;
+            width: 1280px;
         }
 
-            .menu.menu-with-header > div > .header-img-small > img {
+            .menu.menu-with-header > div::before {
+                content: "";
                 display: block;
-                margin: auto;
-                height: 40px;
+                margin: 0 0 calc(-1 * var(--height)) 0;
+                width: 100%;
+                height: var(--height);
+                background-color: var(--header-background-color);
             }
 
-        .menu.menu-with-header > div > .menu-button {
-            display: none;
-        }
+            .menu.menu-with-header > div > .header-img-small {
+                display: flex;
+                float: left;
+                margin-left: 12px;
+                width: 280px;
+                height: var(--height);
+            }
+
+                .menu.menu-with-header > div > .header-img-small > img {
+                    display: block;
+                    margin: auto;
+                    height: 40px;
+                }
+
+            .menu.menu-with-header > div > .menu-button {
+                display: none;
+            }
 
 @media screen and (min-width: 960px) {
     .menu.menu-with-header > div > .menu-content {
@@ -51,14 +65,11 @@
 
 @media screen and (max-width: 959px) {
     .menu.menu-with-header {
+        --height: 58px;
     }
 
         .menu.menu-with-header > div {
         }
-
-            .menu.menu-with-header > div > .header-img-small {
-                height: 58px;
-            }
 
             .menu.menu-with-header > div > .menu-button {
                 display: block;
@@ -133,7 +144,7 @@
                 width: 360px;
                 height: 0;
                 overflow-y: hidden;
-                background-color: var(--background-color);
+                background-color: var(--header-background-color);
                 transition: height ease 500ms, margin-bottom ease 500ms;
             }
 
@@ -146,8 +157,8 @@
                 .menu.menu-with-header > div > .menu-content > li {
                     padding: 0 32px;
                     width: 100%;
+                    background-color: transparent;
                     text-align: left;
-                    vertical-align: central;
                 }
 
                     .menu.menu-with-header > div > .menu-content > li > a {
@@ -167,8 +178,7 @@
                             transition: transform ease 500ms;
                         }
 
-                    .menu.menu-with-header > div > .menu-content > li::before,
-                    .menu.menu-with-header > div > .menu-content > li:last-child::after {
+                    .menu.menu-with-header > div > .menu-content > li::before {
                         margin-top: 0;
                         top: 0;
                         left: 16px;
@@ -179,17 +189,7 @@
                     }
 
                     .menu.menu-with-header > div > .menu-content > li:first-child::before {
-                        left: 0;
-                        width: 100%;
-                        border-bottom: 1px solid var(--separator-light-color);
-                    }
-
-                    .menu.menu-with-header > div > .menu-content > li:last-child::after {
-                        top: auto;
-                        left: 0;
-                        bottom: 0;
-                        width: 100%;
-                        border-bottom: 1px solid var(--separator-light-color);
+                        display: none;
                     }
 }
 
