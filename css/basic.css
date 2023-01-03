@@ -23,8 +23,21 @@
 }
 
 body {
+    --background-color: #fdfefe;        /* H=210, S=16, L=254 */
+    --background-darker-color: #f7f8f8; /* H=210, S=16, L=248 */
+    --footer-background-color: #eff0f0; /* H=210, S=16, L=240 */
+    --separator-dark-color: #abb0b4;    /* H=210, S=16, L=176 */
+    --separator-color: #cdd0d2;         /* H=210, S=16, L=208 */
+    --separator-light-color: #e6e8e9;   /* H=210, S=16, L=232 */
+    --color: #25282a;                   /* H=210, S=16, L=40 */
+    --lighter-color: #4a5055;           /* H=210, S=16, L=80 */
+    --light-color: #70787f;             /* H=210, S=16, L=120 */
+    --main-color: #80c0a0;
+    --accent-color: #339;
     margin: 0;
     overflow-y: scroll;
+    background-color: var(--background-color);
+    color: var(--color);
     font-size: 16px;
     line-height: 1.75em;
     font-family: "NotoSansJPLight", sans-serif;
@@ -88,8 +101,8 @@ code {
     line-height: 1.25em;
 }
 
-small.breadcrumb a {
-    color: black;
+small.breadcrumb, small.breadcrumb > a {
+    color: inherit;
 }
 
 h1 {
@@ -106,7 +119,7 @@ h2 {
     font-size: 1.75em;
     line-height: 1.375;
     font-weight: 700;
-    border-bottom: 2px solid #339;
+    border-bottom: 2px solid var(--accent-color);
 }
 
     h2::before {
@@ -116,7 +129,7 @@ h2 {
         bottom: 0;
         height: inherit;
         width: 85%;
-        border-bottom: 3px solid #80c0a0;
+        border-bottom: 3px solid var(--main-color);
         border-right: 3px solid transparent;
     }
 
@@ -127,7 +140,7 @@ h3 {
     font-size: 1.375em;
     line-height: 1.375;
     font-weight: 700;
-    border-left: 3px solid #339;
+    border-left: 3px solid var(--accent-color);
 }
 
     h3::before {
@@ -137,7 +150,7 @@ h3 {
         top: 0;
         width: inherit;
         height: 9px;
-        border-left: 9px solid #80c0a0;
+        border-left: 9px solid var(--main-color);
     }
 
     h3::after {
@@ -147,7 +160,7 @@ h3 {
         top: -10px;
         width: inherit;
         height: 6px;
-        border-left: 6px solid #80c0a0;
+        border-left: 6px solid var(--main-color);
     }
 
 h4 {
@@ -162,7 +175,7 @@ h5 {
 
 h6 {
     font-size: 1em;
-    color: #777;
+    color: var(--lighter-color);
 }
 
 mark {
@@ -195,11 +208,11 @@ table {
         table.with-border th,
         table.with-border td {
             padding: 4px 8px;
-            border: 1px solid #d0d7de;
+            border: 1px solid var(--separator-color);
         }
 
         table.with-border tr:nth-child(2n) td {
-            background-color: #f6f8fa;
+            background-color: var(--background-darker-color);
         }
 
 img.no-horizonal-margin {

@@ -1,6 +1,7 @@
 ﻿.menu {
-    background-color: white;
-    border-bottom: 1px solid #e8e8e8;
+    --shadow-color: #00000010;
+    background-color: inherit;
+    border-bottom: 1px solid var(--separator-light-color);
 }
 
     .menu .menu-content {
@@ -26,7 +27,7 @@
                 height: 40px;
                 top: 50%;
                 margin-top: -20px;
-                border-right: 1px solid #ccc;
+                border-right: 1px solid var(--separator-color);
             }
 
             .menu .menu-content li::after {
@@ -34,7 +35,7 @@
             }
 
             .menu .menu-content li:hover {
-                background-color: #f8f8f8;
+                background-color: var(--shadow-color);
             }
 
             .menu .menu-content li a {

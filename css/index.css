@@ -82,14 +82,15 @@
 .header {
     width: 100%;
     height: auto;
+    --header-average-color: #687481;
 }
 
     .header.pc {
-        background: url("/img/header_only-logo.svg") center / cover no-repeat #687481;
+        background: url("/img/header_only-logo.svg") center / cover no-repeat var(--header-average-color);
     }
 
     .header.smartphone {
-        background: url("/img/header-smartphone_only-logo.svg") center / cover no-repeat #687481;
+        background: url("/img/header-smartphone_only-logo.svg") center / cover no-repeat var(--header-average-color);
     }
 
     .header > img {

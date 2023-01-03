@@ -77,11 +77,11 @@
 
                 .menu.menu-with-header > div > .menu-button:hover,
                 .menu.menu-with-header > div > .menu-button:focus {
-                    background-color: #e8e8e8;
+                    background-color: var(--shadow-color);
                 }
 
                 .menu.menu-with-header > div > .menu-button.visible {
-                    background-color: #e8e8e8;
+                    background-color: var(--shadow-color);
                 }
 
                 .menu.menu-with-header > div > .menu-button > .menu-button-content {
@@ -105,7 +105,7 @@
                             width: 24px;
                             height: 2px;
                             content: "";
-                            background-color: #444;
+                            background-color: var(--lighter-color);
                         }
 
                         .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-hamburger > .menu-button-content-hamburger-line {
@@ -122,6 +122,7 @@
 
                     .menu.menu-with-header > div > .menu-button > .menu-button-content > .menu-button-content-text {
                         margin: 0 auto;
+                        color: var(--color);
                         font-size: 10px;
                     }
 
@@ -132,7 +133,7 @@
                 width: 360px;
                 height: 0;
                 overflow-y: hidden;
-                background-color: white;
+                background-color: var(--background-color);
                 transition: height ease 500ms, margin-bottom ease 500ms;
             }
 
@@ -174,21 +175,21 @@
                         width: calc(100% - 32px);
                         height: 0;
                         border-right: none;
-                        border-bottom: 1px solid #ccc;
+                        border-bottom: 1px solid var(--separator-color);
                     }
 
                     .menu.menu-with-header > div > .menu-content > li:first-child::before {
                         left: 0;
                         width: 100%;
-                        border-bottom: 1px solid #e8e8e8;
+                        border-bottom: 1px solid var(--separator-light-color);
                     }
 
                     .menu.menu-with-header > div > .menu-content > li:last-child::after {
                         top: auto;
-                        left: 0;    
+                        left: 0;
                         bottom: 0;
                         width: 100%;
-                        border-bottom: 1px solid #e8e8e8;
+                        border-bottom: 1px solid var(--separator-light-color);
                     }
 }
 
