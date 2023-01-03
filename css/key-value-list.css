@@ -37,9 +37,10 @@
             }
 
                 div.key-value-list.adjust > div.table-row > div.table-cell.key {
-                    margin: 16px 0 10px 0;
+                    margin: 16px 0 8px 0;
                     white-space: normal;
                     font-size: 1.125em;
+                    line-height: 1.25;
                     font-weight: 700;
                 }
 

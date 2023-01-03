@@ -2,6 +2,7 @@
     --shadow-color: #00000010;
     background-color: inherit;
     border-bottom: 1px solid var(--separator-light-color);
+    line-height: 1;
 }
 
     .menu .menu-content {
@@ -40,7 +41,7 @@
 
             .menu .menu-content li a {
                 display: block;
-                padding: 20px 0;
+                padding: 24px 0;
                 text-decoration: none;
                 color: black;
             }

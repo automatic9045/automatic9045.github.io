@@ -84,11 +84,12 @@ footer {
             footer > .footer-bus > ul.footer-sns::before {
                 content: "Share!";
                 position: absolute;
-                top: 12px;
+                top: 18px;
                 width: 100%;
                 text-align: center;
                 font-weight: 500;
                 font-size: 1.25em;
+                line-height: 1;
             }
 
             footer > .footer-bus > ul.footer-sns::after {

@@ -39,7 +39,7 @@ body {
     background-color: var(--background-color);
     color: var(--color);
     font-size: 16px;
-    line-height: 1.75em;
+    line-height: 1.9;
     font-family: "NotoSansJPLight", sans-serif;
     -webkit-text-size-adjust: 100%;
 }
@@ -74,7 +74,7 @@ small {
 }
 
 p {
-    margin: 16px 0;
+    margin: 0 0 16px 0;
     text-align: justify;
 }
 
@@ -106,18 +106,18 @@ small.breadcrumb, small.breadcrumb > a {
 }
 
 h1 {
-    margin: 12px 0 40px 0;
-    font-size: 2.5em;
-    line-height: 1.5;
+    margin: 16px 0 32px 0;
+    font-size: 2.25em;
+    line-height: 1.25;
     font-weight: 700;
 }
 
 h2 {
     position: relative;
-    margin: 40px 0 24px 0;
-    padding-bottom: 20px;
-    font-size: 1.75em;
-    line-height: 1.375;
+    margin: 32px 0 16px 0;
+    padding-bottom: 16px;
+    font-size: 1.5em;
+    line-height: 1.25;
     font-weight: 700;
     border-bottom: 2px solid var(--accent-color);
 }
@@ -135,10 +135,10 @@ h2 {
 
 h3 {
     position: relative;
-    margin: 32px 0 20px 0;
+    margin: 28px 0 16px 0;
     padding: 4px 0 4px 20px;
-    font-size: 1.375em;
-    line-height: 1.375;
+    font-size: 1.25em;
+    line-height: 1.25;
     font-weight: 700;
     border-left: 3px solid var(--accent-color);
 }
@@ -164,17 +164,20 @@ h3 {
     }
 
 h4 {
-    margin: 32px 0 20px 0;
-    font-size: 1.25em;
+    margin: 24px 0 12px 0;
+    font-size: 1.125em;
+    line-height: 1.25;
     font-weight: 700;
 }
 
 h5 {
     font-size: 1em;
+    line-height: 1.25;
 }
 
 h6 {
     font-size: 1em;
+    line-height: 1.25;
     color: var(--lighter-color);
 }
 
@@ -297,7 +300,7 @@ div.note {
     --note-background-color: #f7f7f7; /* a = 0x10/0xff = 1/16 = 0.0625 */
     --note-color: #808080;
     position: relative;
-    margin: calc(24px + var(--note-icon-height) * 0.625) 0 24px calc(var(--note-icon-height) * 0.625);
+    margin: calc(16px + var(--note-icon-height) * 0.625) 0 16px calc(var(--note-icon-height) * 0.625);
     padding: 16px 16px 16px 24px;
     width: calc(100% - var(--note-icon-height) * 0.625);
     background-color: var(--note-background-color);
