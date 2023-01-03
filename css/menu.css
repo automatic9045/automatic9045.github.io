@@ -1,7 +1,6 @@
 ﻿.menu {
     --shadow-color: #00000010;
-    background-color: inherit;
-    border-bottom: 1px solid var(--separator-light-color);
+    background-color: var(--header-background-color);
     line-height: 1;
 }
 
