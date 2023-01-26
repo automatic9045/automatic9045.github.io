@@ -367,6 +367,22 @@ div.note {
         --note-color: #e80c0c; /* H=0, S=90, L=48 */
     }
 
+    div.note > *:first-child {
+        margin-top: 0;
+    }
+
+    div.note > *:last-child {
+        margin-bottom: 0;
+    }
+
+    div.note > ul:first-child {
+        margin-top: 8px;
+    }
+
+    div.note > h2:first-child, div.note > h3:first-child, div.note > h4:first-child {
+        margin-top: 4px;
+    }
+
 .hidden-counter {
     display: none;
 }
