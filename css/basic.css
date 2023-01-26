@@ -219,8 +219,13 @@ table {
             background-color: var(--background-darker-color);
         }
 
+img {
+    max-width: 100%;
+}
+
 img.no-horizonal-margin {
     margin: 0 -16px 0 -16px;
+    max-width: none;
 }
 
 img.stretch {
