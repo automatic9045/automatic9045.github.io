@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+    <meta name="theme-color" content="#fff" />
+
+    <meta name="author" content="automatic9045" />
+    <meta property="og:site_name" content="岡オカ営業所" />
+    <meta property="og:title" content="AtsEXインストールガイド - AtsEX ATSプラグイン拡張キット - 岡オカ営業所" />
+    <meta property="og:description" content="ATSプラグインの機能を拡張するプラグイン「AtsEX」のFAQページです。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://automatic9045.github.io/img/ogp.png" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@atF9045" />
+
+    <title>AtsEXインストールガイド - AtsEX ATSプラグイン拡張キット - 岡オカ営業所</title>
+    <base href="https://automatic9045.github.io" />
+    <link rel="icon" type="image/svg+xml" href="img/bus.svg">
+    <link rel="apple-touch-icon" type="image/png" href="img/bus.png">
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/copyright.js"></script>
+</head>
+<body>
+    <header class="menu menu-with-header">
+        <script>includeByClasses("menu-small.html", "menu", 0);</script>
+    </header>
+    <div id="content">
+        <small class="breadcrumb">
+            <a href="/">HOME</a> > <a href="/contents/bve/">BVE関連</a> > <a href="/contents/bve/AtsEX/">AtsEX - ATSプラグイン拡張キット for BVE 5 & 6</a> > AtsEXインストールガイド
+        </small>
+        <h1>AtsEXインストールガイド</h1>
+        <p>
+            AtsEX本体のインストール方法を説明します。
+        </p>
+
+        <h2>1. パッケージをダウンロードする</h2>
+        <h3>1-1. 最新バージョンのリリースページにアクセスする</h3>
+        <p class="strong">
+            <a href="https://github.com/automatic9045/AtsEX/releases">Releases・automatic9045/AtsEX</a>
+        </p>
+        <p>
+            上のリンク（別サイト）にアクセスし、最も上に表示されている最新のリリースのタイトル（2023/01/26時点では「beta0.17.5 - v0.17.30125.1」）をクリックします。
+        </p>
+        <p>
+            <img src="/contents/bve/AtsEX/docs/user/installation-guide_1-1.png" />
+        </p>
+
+        <h3>1-2. アップデート内容を確認する</h3>
+        <p>
+            リリースページには、そのアップデートで追加された機能や破壊的変更（プラグインのコードを書き換えなければならない可能性がある変更）について記載されています。
+            必要に応じて詳細を読み、その後ページ最下部の「Assets」から「AtsEx_[バージョン名].7z」をダウンロードしてください。
+        </p>
+        <p>
+            <img src="/contents/bve/AtsEX/docs/user/installation-guide_1-2.png" />
+        </p>
+
+        <p>
+            また、プラグインを開発される場合は「AtsEx_[バージョン名]_SDK.7z」も併せてダウンロードすることをお勧めします。
+            こちらはサンプルプラグインのソースコードのセットで、プラグイン開発の際の参考になるかと思います。
+        </p>
+
+        <h2>2. パッケージを解凍する</h2>
+        <h3>2-1. ゾーン識別子を削除する</h3>
+        <div class="note note-warn">
+            この手順を飛ばしたままパッケージを解凍してしまうと、不可解なエラーの原因となる場合があります。
+        </div>
+
+        <h4>2-1-1. パッケージのプロパティを開く</h4>
+        <p>
+            ダウンロードしたパッケージ（AtsEx_[バージョン名].7z）を右クリック→[プロパティ]を選択します。
+        </p>
+
+        <h4>2-1-2. ゾーン識別子を削除する</h4>
+        表示されたウィンドウの下部にある[許可する]チェックボックスにチェックを付け、[OK]ボタンをクリックしてウィンドウを閉じます。
+
+        <div class="note note-info">
+            <h4>[許可する]チェックボックスが見当たらない場合</h4>
+            <p>
+                PCの設定によっては、[許可する]チェックボックスが表示されない場合があります。<br />
+                その場合は、初めからゾーン識別子が付加されないようにPCが設定されているため、この手順はスキップしてください。
+            </p>
+        </div>
+
+        <h3>2-2. 解凍ソフトを用意する</h3>
+        <p>
+            AtsEXのパッケージは7z形式で圧縮されていますが、Windowsには7z形式の圧縮ファイルの解凍機能は搭載されていません。そのため、別途解凍ソフトをインストールして頂く必要があります。
+            特にこだわりがなければ<a href="https://sevenzip.osdn.jp/">7-Zip</a>をお勧めしています。
+        </p>
+
+        <h3>2-3. パッケージを解凍する</h3>
+        <div class="note note-warn">
+            手順 2-1「ゾーン識別子を削除する」は確実に行いましたか？<br />
+            この手順を飛ばしたままパッケージを解凍してしまうと、不可解なエラーの原因となる場合があります。
+        </div>
+        <p>
+            パッケージ（AtsEx_[バージョン名].7z）を解凍します。
+            7-Zipをお使いの場合は、右クリック→[7-Zip]→[AtsEx_[バージョン名]に解凍]を選択します。
+        </p>
+
+        <h2>3. パッケージを配置する</h2>
+        <p>
+            解凍して生成されたフォルダを開き、中にあるScenariosフォルダを所定の位置に移動します。既定では <code>ドキュメント\BveTs\Scenarios</code> になります。
+        </p>
+
+        <h2>4. 試しにサンプルシナリオを開く</h2>
+        <p>
+            BVEを実行し、AtsEXのサンプルシナリオを開きます。ここでは「シンプルなサンプル」を選択しましょう。
+        </p>
+        <p>
+            <img src="/contents/bve/AtsEX/docs/user/installation-guide_4.png" />
+        </p>
+
+        <div class="note note-info">
+            <p>
+                読込中、下の画像のようにエラーが表示されますが、AtsEXが正しくインストールされていれば読込完了までに自動的に消えます。
+            </p>
+            <p>
+                <img src="/contents/bve/AtsEX/docs/user/installation-guide_4_1.png" />
+            </p>
+        </div>
+        <div class="note note-warn">
+            <ul>
+                <li>下の画像のような、DLLの読込に失敗したことを示すエラー</li>
+                <li>「ネットワーク上の場所からアセンブリを読み込もうとしました」というエラー</li>
+            </ul>
+            <p>
+                上記のエラーが表示された場合は、手順 2-1「ゾーン識別子を削除する」を飛ばしたままパッケージを解凍してしまっています。<br />
+                解凍したファイルは<b>全て削除し</b>、手順 2-1からやり直してください。
+            </p>
+            <p>
+                <img src="/contents/bve/AtsEX/docs/user/installation-guide_4_2.png" />
+            </p>
+        </div>
+
+        <h2>5. 完了</h2>
+        <p>
+            最終的に発生したエラーが全て消え、正しくシナリオが開けたら導入成功です。お疲れ様でした。
+        </p>
+    </div>
+    <footer class="footer">
+        <script>includeByClasses("footer.html", "footer", 0);</script>
+    </footer>
+</body>
+</html>
