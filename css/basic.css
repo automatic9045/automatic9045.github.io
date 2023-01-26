@@ -346,7 +346,7 @@ div.note {
 
     div.note.note-info {
         --note-icon-text: "i";
-        --note-header-text: "備考";
+        --note-header-text: "参考";
         --note-background-color: #efeffb;
         --note-color: #0a0ac1; /* H=240, S=90, L=40 */
     }
