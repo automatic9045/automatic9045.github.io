@@ -50,6 +50,7 @@
             <li><a href="/contents/bve/AtsEX/faq/#bve5-support">AtsEXはBVE5にも対応していますか？</a></li>
             <li><a href="/contents/bve/AtsEX/faq/#edit-bve">AtsEXはBVEの実行ファイル（exe）を書きかえますか？</a></li>
             <li><a href="/contents/bve/AtsEX/faq/#compability">AtsEXを一度使用したBVEでは、従来のATSプラグインを読み込めなくなりますか？</a></li>
+            <li><a href="/contents/bve/AtsEX/faq/#case">"AtsEx"と"AtsEX"、どちらが正しい表記なのでしょうか？</a></li>
         </ul>
 
         <h4>車両アドオン・マップアドオン開発者向け</h4>
@@ -128,6 +129,24 @@
         <p>
             「<a href="/contents/bve/AtsEX/faq/#edit-bve">AtsEXはBVEの実行ファイル（exe）を書きかえますか？</a>」で説明した通り、AtsEXはBVEの実行ファイルを一切書きかえることなく動作します。
             そのため、従来のATSプラグインが動作しなくなるようなことは一切ありません。
+        </p>
+
+        <h3 id="case">"AtsEx"と"AtsEX"、どちらが正しい表記なのでしょうか？</h3>
+        <p class="strong">
+            A. ソフトウェアの名前としては"AtsEX"が正しいです。ただし、コード・フォルダ名・ファイル名として使用する場合は、C#の命名規則に則って"AtsEx"と表記します。
+        </p>
+        <p>
+            略語の大文字・小文字の決定方法について、C#の命名規則ではざっくり要約すると以下のように定められています。
+        </p>
+        <blockquote>
+            <ul>
+                <li>略語は2文字の場合は全て大文字（例："IO" "DB" "IP"）、3文字以上の場合は頭文字のみ大文字（例："Dll" "Xml"）。</li>
+                <li>ただし、単語の先頭何文字かをとった略語の場合に限っては、2文字であっても頭文字のみ大文字（例："Id" "Ok"）。</li>
+            </ul>
+        </blockquote>
+        <p>
+            AtsEXの"EX"は"EXtend"（拡張する）の意がメイン、すなわち「単語の先頭何文字かをとった略語」に該当します。そのため、コードにおいては"AtsEx"と表記しています。<br />
+            また、AtsEXではファイル、フォルダも原則C#の命名規則に則って命名しているため、それらの名前でも同様、"AtsEx"と表記しています。
         </p>
 
 
