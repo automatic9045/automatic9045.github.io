@@ -2,7 +2,7 @@
 const pathName = location.pathname;
 const title = document.title;
 
-setUrl("twitter", "https://twitter.com/share?url=" + url + "&via=atF9045&related=atF90445&text=" + title);
+setUrl("twitter", "https://twitter.com/share?url=" + url + "&via=atF9045&related=atF9045&text=" + title);
 setUrl("facebook", "http://www.facebook.com/share.php?u=" + url);
 setUrl("hatena", "http://b.hatena.ne.jp/add?mode=confirm&url=" + url + "&title=" + title);
 
