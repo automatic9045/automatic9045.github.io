@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+    <meta name="theme-color" content="#fff" />
+
+    <meta name="author" content="automatic9045" />
+    <meta property="og:site_name" content="岡オカ営業所" />
+    <meta property="og:title" content="上部ステータス - マルス端末研究 - 岡オカ営業所" />
+    <meta property="og:description" content="各種状態を表示するエリアで、表示欄が4つ並んでいます。この表示欄1つを「上部ステータス」と呼び、4つの表示欄全てを合わせて「上部ステータスエリア」と呼びます。画面下部には「下部ステータスエリア」も存在します。ME系端末にも同様のエリアが存在しますが、そちらは「システムライン」と呼ばれているようです。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://automatic9045.github.io/contents/mars/ogp.jpg" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@atF9045" />
+
+    <title>上部ステータス - マルス端末研究 - 岡オカ営業所</title>
+    <base href="https://automatic9045.github.io" />
+    <link rel="icon" type="image/svg+xml" href="img/bus.svg">
+    <link rel="apple-touch-icon" type="image/png" href="img/bus.png">
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+</head>
+<body>
+    <header class="menu menu-with-header">
+        <script>includeByClasses("menu-small.html", "menu", 0);</script>
+    </header>
+    <div id="content">
+        <small class="breadcrumb">
+            <a href="/">HOME</a> > <a href="contents/mars/">マルス端末研究</a> > 上部ステータス
+        </small>
+        <h1>上部ステータス</h1>
+        <img src="contents/mars/img/fkey.png" alt="上部ステータスエリアとFキー" title="上部ステータスエリアとFキー" /><br />
+        ↑上部ステータスエリア（左下の白い四角）とツールバー
+        <p>
+            各種状態を表示するエリアで、表示欄が4つ並んでいます。この表示欄1つを「上部ステータス」と呼び、4つの表示欄全てを合わせて「上部ステータスエリア」と呼びます。<br />
+            画面下部には「下部ステータスエリア」も存在します。
+        </p>
+        <div class="note note-info">
+            ME系端末にも同様のエリアが存在しますが、そちらは「システムライン」と呼ばれているようです。
+        </div>
+
+        <h2>上部ステータスの一覧</h2>
+        <table class="with-border scrollable">
+            <thead>
+                <tr><th>キー名</th><th>表示文言の例</th><th>簡単な説明</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><a href="/contents/mars/sysline/training.html">訓練状態</a></td><td>営業訓練</td><td class="min-w-200">営業訓練中かどうかを表示</td></tr>
+                <tr><td><a href="/contents/mars/sysline/cs.html">モード状態</a></td><td>ＣＳ読取待</td><td class="min-w-200">カードリーダー、原券読取機などのモードを表示</td></tr>
+                <tr><td><a href="/contents/mars/sysline/3.html">注意喚起文言</a></td><td>一ヶ月発売間近</td><td class="min-w-200">いわゆる10時打ち関連の注意喚起を表示</td></tr>
+                <tr><td><a href="/contents/mars/sysline/onetime.html">一件中状態</a></td><td>営業訓練</td><td class="min-w-200">一件操作関連の状態を表示</td></tr>
+                <tr><td><a href="/contents/mars/sysline/contact.html" class="constr">連絡状態</a></td><td>連絡</td><td class="min-w-200">中央装置からの呼出があったときに表示</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <footer class="footer">
+        <script>includeByClasses("footer-mars.html", "footer", 0);</script>
+    </footer>
+</body>
+</html>
