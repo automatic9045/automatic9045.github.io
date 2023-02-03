@@ -12,3 +12,8 @@ table.with-border th.red,
 table.with-border td.red {
     background-color: #ffc0c0 !important;
 }
+
+table.with-border th.green,
+table.with-border td.green {
+    background-color: #c0ffc0 !important;
+}
