@@ -8,7 +8,7 @@
 
     <meta name="author" content="automatic9045" />
     <meta property="og:site_name" content="岡オカ営業所" />
-    <meta property="og:title" content="システムライン：一件操作中 - マルス端末研究 - 岡オカ営業所" />
+    <meta property="og:title" content="上部ステータス「一件中状態」 - マルス端末研究 - 岡オカ営業所" />
     <meta property="og:description" content="一件操作中は「一件操作中」と表示されます。「マルス端末研究」ではJRのみどりの窓口などで活躍するマルス端末の画面や操作方法についての研究の成果を公開しています。" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="https://automatic9045.github.io/contents/mars/ogp.jpg" />
@@ -16,7 +16,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@atF9045" />
 
-    <title>システムライン：一件操作中 - マルス端末研究 - 岡オカ営業所</title>
+    <title>上部ステータス「一件中状態」 - マルス端末研究 - 岡オカ営業所</title>
     <base href="https://automatic9045.github.io" />
     <link rel="icon" type="image/svg+xml" href="img/bus.svg">
     <link rel="apple-touch-icon" type="image/png" href="img/bus.png">
@@ -32,12 +32,26 @@
     </header>
     <div id="content">
         <small class="breadcrumb">
-            <a href="/">HOME</a> > <a href="contents/mars/">マルス端末研究</a> > システムライン：一件操作中
+            <a href="/">HOME</a> > <a href="/contents/mars/">マルス端末研究</a> > <a href="/contents/mars/sysline/">上部ステータス</a> > 一件中状態
         </small>
-        <h1>システムライン：一件操作中</h1>
+        <h1>上部ステータス「一件中状態」</h1>
         <p>
-            <a href="contents/mars/onetime/">一件操作</a>中は「一件操作中」と表示されます。
+            <a href="contents/mars/onetime/">一件操作</a>関連の状態を表示します。
         </p>
+
+        <h2>表示文言の一覧</h2>
+        <table class="with-border scrollable">
+            <thead>
+                <tr><th>表示文言</th><th>意味</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>一件操作中</td><td class="min-w-200">一件操作中</td></tr>
+                <tr><td>一件中断待</td><td class="min-w-200">一件操作の<a href="contents/mars/send/interrupt.html" class="constr">中断</a>待ち</td></tr>
+                <tr><td>一件中断中</td><td class="min-w-200">一件操作の<a href="contents/mars/send/interrupt.html" class="constr">中断</a>中</td></tr>
+                <tr><td>一件再開待</td><td class="min-w-200">一件操作の<a href="contents/mars/send/interrupt.html" class="constr">再開</a>待ち</td></tr>
+                <tr><td>挿入乗変中</td><td class="min-w-200">挿入乗車変更操作中</td></tr>
+            </tbody>
+        </table>
     </div>
     <footer class="footer">
         <script>includeByClasses("footer-mars.html", "footer", 0);</script>

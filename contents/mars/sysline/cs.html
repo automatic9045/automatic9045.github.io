@@ -8,21 +8,22 @@
 
     <meta name="author" content="automatic9045" />
     <meta property="og:site_name" content="岡オカ営業所" />
-    <meta property="og:title" content="システムライン：CS - マルス端末研究 - 岡オカ営業所" />
-    <meta property="og:description" content="カードリーダーの状態を表示します。 表示の推移. 1. 初期状態. 何も表示されていません。 2. Fキー「ｸﾚｼﾞｯﾄ」を押下＝カードリーダーが起動した時. 背景が黄緑色に変わり、「ＣＳ読取待」と表示されます。 3. カードを読み込んだ時. 背景が黄緑色に変わり、「ＣＳ読取待」と表示されます。" />
+    <meta property="og:title" content="上部ステータス「モード状態」 - マルス端末研究 - 岡オカ営業所" />
+    <meta property="og:description" content="カードリーダー、原券読取機などのモードを表示します。 カードリーダー使用時の表示の推移. 1. 初期状態. 何も表示されていません。 2. Fキー「ｸﾚｼﾞｯﾄ」を押下＝カードリーダーが起動した時. 背景が黄緑色に変わり、「ＣＳ読取待」と表示されます。 3. カードを読み込んだ時. 背景が黄緑色に変わり、「ＣＳ読取待」と表示されます。" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="https://automatic9045.github.io/contents/mars/ogp.jpg" />
     <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@atF9045" />
 
-    <title>システムライン：CS - マルス端末研究 - 岡オカ営業所</title>
+    <title>上部ステータス「モード状態」 - マルス端末研究 - 岡オカ営業所</title>
     <base href="https://automatic9045.github.io" />
     <link rel="icon" type="image/svg+xml" href="img/bus.svg">
     <link rel="apple-touch-icon" type="image/png" href="img/bus.png">
     <link rel="stylesheet" type="text/css" href="css/basic.css" />
     <link rel="stylesheet" type="text/css" href="css/menu.css" />
     <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <link rel="stylesheet" type="text/css" href="css/color-table.css" />
     <script type="text/javascript" src="js/basic.js"></script>
     <script type="text/javascript" src="js/hamburger.js"></script>
 </head>
@@ -32,14 +33,14 @@
     </header>
     <div id="content">
         <small class="breadcrumb">
-            <a href="/">HOME</a> > <a href="contents/mars/">マルス端末研究</a> > システムライン：CS
+            <a href="/">HOME</a> > <a href="/contents/mars/">マルス端末研究</a> > <a href="/contents/mars/sysline/">上部ステータス</a> > モード状態
         </small>
-        <h1>システムライン：CS</h1>
+        <h1>モード状態</h1>
         <p>
-            カードリーダーの状態を表示します。
+            カードリーダー、原券読取機などのモードを表示します。
         </p>
 
-        <h2>表示の推移</h2>
+        <h2>カードリーダー使用時の表示の推移</h2>
         <h3>1. 初期状態</h3>
         <p>
             何も表示されていません。
@@ -59,6 +60,18 @@
         <p>
             「暗証 ０」の末尾の数字が入力した暗証番号の桁数に変動します。例えば暗証番号を3桁目まで入力した時点では「暗証 ４」と表示されます。
         </p>
+
+        <h2>表示文言の一覧</h2>
+        <table class="with-border scrollable">
+            <thead>
+                <tr><th>表示文言</th><th>背景色</th><th>意味</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>ＣＳ読取待</td><td class="green">黄緑</td><td class="min-w-200">カードリーダーが起動し、スタンバイ状態となった</td></tr>
+                <tr><td>暗証 ｎ</td><td>不明</td><td class="min-w-200">カードが読み込まれており、暗証番号がn桁入力された（n=0～4）</td></tr>
+                <tr><td>読取完了</td><td>不明</td><td class="min-w-200">発行替要求時、読取機に挿入した原券が読み込まれた</td></tr>
+            </tbody>
+        </table>
     </div>
     <footer class="footer">
         <script>includeByClasses("footer-mars.html", "footer", 0);</script>
