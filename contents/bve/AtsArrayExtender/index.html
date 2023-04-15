@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+    <meta name="theme-color" content="#fff" />
+
+    <meta name="author" content="automatic9045" />
+    <meta property="og:site_name" content="岡オカ営業所" />
+    <meta property="og:title" content="AtsArrayExtender - 岡オカ営業所" />
+    <meta property="og:description" content="パネル・サウンドで使用可能なインデックスを4倍の範囲に拡張します。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://automatic9045.github.io/img/ogp.png" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@atF9045" />
+
+    <title>AtsArrayExtender - 岡オカ営業所</title>
+    <base href="https://automatic9045.github.io" />
+    <link rel="icon" type="image/svg+xml" href="img/bus.svg">
+    <link rel="apple-touch-icon" type="image/png" href="img/bus.png">
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu-with-header.css" />
+    <link rel="stylesheet" type="text/css" href="/copyright/highlight/vs2015.min.css">
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/copyright.js"></script>
+    <script type="text/javascript" src="/copyright/highlight/highlight.min.js"></script>
+</head>
+<body>
+    <div class="hidden-counter">
+        <!-- FC2カウンター ここから -->
+        <script type="text/javascript" src="//counter1.fc2.com/counter.php?id=37357410&main=1"></script>
+        <noscript><img src="//counter1.fc2.com/counter_img.php?id=37357410&main=1" /></noscript>
+        <script type="text/javascript" src="//counter1.fc2.com/views.php?id=37357410&main=1"></script>
+        <noscript><img src="//counter1.fc2.com/counter_now.php?id=37357410&main=1" /></noscript>
+        <!-- FC2カウンター ここまで -->
+    </div>
+    <header class="menu menu-with-header">
+        <script>includeByClasses("menu-small.html", "menu", 0);</script>
+    </header>
+    <div id="content">
+        <small class="breadcrumb">
+            <a href="/">HOME</a> > <a href="/contents/bve/">BVE関連</a> > AtsArrayExtender
+        </small>
+        <h1>AtsArrayExtender</h1>
+        <p>
+            パネル・サウンドで使用可能なインデックスを4倍の範囲に拡張します。
+        </p>
+
+        <h2>特長</h2>
+        <h3>シンプルで高速動作</h3>
+        <p>
+            紛らわしいですが、AtsArrayExtenderは<mark>AtsEXとは独立した単体のソフトウェアです</mark>。
+        </p>
+        <p>
+            AtsEXの開発で培った「BVE本体の内部を解析する」技術を活用しながらも、非常にシンプルに仕上げました。<br />
+            機能はただ1つ、使用可能なインデックスの範囲を拡張するのみのため、高機能なAtsEXとは異なりとても軽快に動作します。
+        </p>
+        <div class="note note-info">
+            前述した「BVE本体の内部を解析する」処理の部分にてAtsEXと共通のモジュールを使用している関係で、
+            AtsEX側のバージョンによってはAtsArrayExtenderとAtsEXが競合する可能性があります。<br />
+            この問題は今後のリリースにて解消する予定です。
+        </div>
+
+        <h3>通常のBVEと全く変わらない使い勝手で、学習コストも改修コストもほぼゼロ</h3>
+        <p>
+            使用可能なインデックスがただ0から1023までの1024個に増えただけで、使い勝手は通常のBVEと全く変わりません。<br />
+            パネルやサウンドでは <code>key = ats1001</code> のように記述すれば動作しますし、
+            ATSプラグインからも <code>panel[1001] = 123;</code> のように、拡張分のインデックスにも通常と全く同じ文法でアクセスできます。
+        </p>
+        <p>
+            AtsArrayExtenderを使うために新しい文法などを学ぶ必要は全くありませんし、既存のプラグインを書き換える必要も全くありません。
+            <mark>コストゼロで手軽に始めることができます</mark>。
+        </p>
+
+        <h3>セットアップも簡単</h3>
+        <p>
+            パッケージを解凍して、入力デバイスプラグインとして読み込ませるだけで動作します。車両に組み込んだりなどの面倒な手順は全くありません。<br />
+            ユーザーに面倒なセットアップを要求する必要はありませんから、データ制作で気軽にお使いいただけます。
+        </p>
+
+        <h2>対応BVEバージョン</h2>
+        <p>
+            少しでも異なるバージョンでは正常に動作しない可能性が高いです。
+        </p>
+        <h3>BVE Trainsim 5</h3>
+        <ul>
+            <li>5.8（Version 5.8.7554.391）</li>
+        </ul>
+        <div class="note note-warn">
+            ※そのままでは使用できませんが、BVE5.8本体に少しだけ手を加えると動作するようになります。<br />
+            詳細→<a href="/contents/bve/AtsEX/tips/bve5-support.html">BVE5でAtsEXを使用するには</a>（AtsEXでの手順を説明していますが、AtsArrayExtenderの場合も同じです）
+        </div>
+        <h3>BVE Trainsim 6</h3>
+        <ul>
+            <li>6.0（Version 6.0.7554.619）</li>
+        </ul>
+        <div class="note note-info">
+            <h4>動かないときは……</h4>
+            <p>
+                BVE6.0 RC版の一部のバージョンでは動作しないとのことです。お手持ちのBVEがRC版ではなく正規版かどうか今一度ご確認ください。
+            </p>
+        </div>
+
+        <h2>インストール方法</h2>
+        <h3>1. パッケージをダウンロードする</h3>
+        <h4>1-1. 最新バージョンのリリースページにアクセスする</h4>
+        <p class="strong">
+            <a href="https://github.com/automatic9045/AtsArrayExtender/releases">Releases・automatic9045/AtsArrayExtender</a>
+        </p>
+        <p>
+            上のリンク（別サイト）にアクセスし、最も上に表示されている最新のリリースのタイトル（2023/04/15時点では「v1.0」）をクリックします。
+        </p>
+
+        <h4>1-2. ダウンロードする</h4>
+        <p>
+            ページ最下部の「Assets」から「AtsArrayExtender_[バージョン名].7z」をダウンロードしてください。
+        </p>
+
+        <h3>2. パッケージを解凍する</h3>
+        <h4>2-1. ゾーン識別子を削除する</h4>
+        <div class="note note-warn">
+            この手順を飛ばしたままパッケージを解凍してしまうと、不可解なエラーの原因となる場合があります。
+        </div>
+
+        <h5>2-1-1. パッケージのプロパティを開く</h5>
+        <p>
+            ダウンロードしたパッケージ（AtsArrayExtender_[バージョン名].7z）を右クリック→[プロパティ]を選択します。
+        </p>
+
+        <h5>2-1-2. ゾーン識別子を削除する</h5>
+        表示されたウィンドウの下部にある[許可する]チェックボックスにチェックを付け、[OK]ボタンをクリックしてウィンドウを閉じます。
+
+        <div class="note note-info">
+            <h4>[許可する]チェックボックスが見当たらない場合</h4>
+            <p>
+                PCの設定によっては、[許可する]チェックボックスが表示されない場合があります。<br />
+                その場合は、初めからゾーン識別子が付加されないようにPCが設定されているため、この手順はスキップしてください。
+            </p>
+        </div>
+
+        <h4>2-2. 解凍ソフトを用意する</h4>
+        <p>
+            AtsArrayExtenderのパッケージは7z形式で圧縮されていますが、Windowsには7z形式の圧縮ファイルの解凍機能は搭載されていません。そのため、別途解凍ソフトをインストールして頂く必要があります。
+            特にこだわりがなければ<a href="https://sevenzip.osdn.jp/">7-Zip</a>をお勧めしています。
+        </p>
+
+        <h4>2-3. パッケージを解凍する</h4>
+        <div class="note note-warn">
+            手順 2-1「ゾーン識別子を削除する」は確実に行いましたか？<br />
+            この手順を飛ばしたままパッケージを解凍してしまうと、不可解なエラーの原因となる場合があります。
+        </div>
+        <p>
+            パッケージ（AtsArrayExtender_[バージョン名].7z）を解凍します。
+            7-Zipをお使いの場合は、右クリック→[7-Zip]→[AtsArrayExtender_[バージョン名]に解凍]を選択します。
+        </p>
+
+        <h3>3. パッケージを配置する</h3>
+        <p>
+            解凍して生成されたフォルダを開き、中にあるInput Devicesフォルダを所定の位置に移動します。
+        </p>
+        <div class="note note-warn">
+            AtsArrayExtenderはATSプラグインではなく入力デバイスプラグインです。配置先を間違えないように注意してください。
+        </div>
+    </div>
+    <footer class="footer">
+        <script>includeByClasses("footer.html", "footer", 0);</script>
+    </footer>
+</body>
+</html>
