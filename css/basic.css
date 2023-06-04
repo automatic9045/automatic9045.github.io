@@ -219,18 +219,22 @@ table {
             background-color: var(--background-darker-color);
         }
 
-img {
+img, video {
     max-width: 100%;
 }
 
-img.no-horizonal-margin {
-    margin: 0 -16px 0 -16px;
-    max-width: none;
-}
+    img.no-horizonal-margin, video.no-horizonal-margin {
+        margin: 0 -16px 0 -16px;
+        max-width: none;
+    }
 
-img.stretch {
-    width: 100%;
-}
+    img.stretch, video.stretch {
+        width: 100%;
+    }
+
+    img.small, video.small {
+        width: 640px;
+    }
 
 p.strong {
     font-weight: bold;
