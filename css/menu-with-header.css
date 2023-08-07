@@ -3,7 +3,7 @@
 
     .menu.menu-with-header {
         --height: 64px;
-        background-color: transparent;
+        background-color: var(--header-background-color);
     }
 
         .menu.menu-with-header > div {
@@ -17,7 +17,6 @@
                 margin: 0 0 calc(-1 * var(--height)) 0;
                 width: 100%;
                 height: var(--height);
-                background-color: var(--header-background-color);
             }
 
             .menu.menu-with-header > div > .header-img-small {
