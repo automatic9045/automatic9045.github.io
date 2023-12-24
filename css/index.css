@@ -111,6 +111,11 @@
         margin-bottom: -2px !important;
     }
 
+a.fanbox > img {
+    width: 240px;
+    margin: 8px 0;
+}
+
 @media screen and (max-width: 959px) {
     .menu.pc {
         display: none;
