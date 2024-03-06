@@ -137,8 +137,12 @@ async function fade() {
 function registerHeaderImages() {
     const headerImages = document.querySelectorAll(".header > img");
     headerImages.forEach(headerImage => {
-        headerImage.addEventListener("load", () => {
+        if (headerImage.complete) {
             headerImage.classList.add("img-fade");
-        });
+        } else {
+            headerImage.addEventListener("load", () => {
+                headerImage.classList.add("img-fade");
+            });
+        }
     });
 }
