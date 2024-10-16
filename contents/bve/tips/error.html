@@ -65,13 +65,48 @@
             Direct3D（DirectXに含まれるサービスの1つ）を正しく読み込めませんでした。
         </p>
         <p>
-            DirectXを読み込めていません。<mark>DirectX エンドユーザーランタイム</mark>はインストールしましたか？
+            DirectXを読み込めていません。多くの場合、原因は次のどちらかです。
+        </p>
+
+        <h4>DirectX エンドユーザーランタイムがインストールされていない</h4>
+        <p>
+            新しいPCで動作しない場合はこれが原因と考えられます。
         </p>
         <p>
             BVEは「DirectX9」という古いバージョンのDirectX上で動作します。
-            <strong>DirectXがインストールされているPCでこのエラーが発生する場合は、BVEが対応している古いバージョンのDirectXがインストールされていない可能性が高いです</strong>。
-            <a href="https://www.microsoft.com/ja-jp/download/details.aspx?id=35&" target="_blank">Microsoftのホームページ</a>からインストールしてください。
+            DirectXがインストールされているPCでこのエラーが発生する場合は、BVEが対応している古いバージョンのDirectXがインストールされていない可能性が高いです。
         </p>
+        <p>
+            <a href="https://www.microsoft.com/ja-jp/download/details.aspx?id=35&" target="_blank">Microsoftのホームページ</a>から<mark>DirectX エンドユーザーランタイム</mark>をインストールしてください。
+        </p>
+
+        <h4>PCの一時的な異常</h4>
+        <p>
+            何らかのアプリケーションなどが原因で、一時的にDirectXを読み込めなくなることがあります。まずはPCを再起動してみてください。
+        </p>
+
+        <h4>BVEの設定ファイルに異常がある</h4>
+        <p>
+            BVEのウィンドウサイズをゼロになるまで縮めてしまうと、次回起動時、元のウィンドウサイズを復元しようとしたDirectXが「サイズがゼロのウィンドウを描画することはできない」とエラーを発生させてしまいます。
+            これ以外の理由でも、何らかの要因によりBVEの設定ファイルに異常値が保存され、起動できなくなるケースがあります。
+        </p>
+        <p>
+            <code>Documents\BveTs\Settings</code> にBVEの設定ファイルが保存されています。
+            BVE6が動作しない場合は<mark>BveTs6.Preferences.xml</mark>、BVE5が動作しない場合は<mark>Preferences.xml</mark>を削除してください。
+        </p>
+        <div class="note note-warn">
+            この操作を行うと、BVEが初期化され、以下の項目がリセットされます。
+            <ul>
+                <li>言語</li>
+                <li>参照するシナリオフォルダの設定</li>
+                <li>ウィンドウサイズ、フルスクリーン設定</li>
+                <li>描画距離、違法性フィルターの設定</li>
+                <li>補助表示の設定</li>
+                <li>キー割り当て</li>
+                <li>使用する入力デバイスプラグインの設定</li>
+                <li>開発者機能の有効/無効</li>
+            </ul>
+        </div>
 
         <h3 id="startup-directsound">Cannot create DirectSound device.</h3>
         <p class="strong">
